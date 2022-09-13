@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ClientesService } from './service/clientes.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'EnergyPassion';
+
+  constructor(
+    private clienteService: ClientesService )
+  {
+    this.clienteService.getClientes().subscribe(resp =>{
+      console.log(resp)
+
+    })
+  }
 }

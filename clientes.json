@@ -1,0 +1,14 @@
+
+{
+      "name": "Molecule Man",
+      "age": 29,
+      "nickname": "Dan Jukes",
+	"enfermedades existenciales": "yes",
+      "enfermedades": [
+        "Diabetes tipo II "
+      ],
+	"meta-principal": "bajar peso",
+	"tiempoDisponible": "mañanas",
+	"sobre peso": "yes",
+	"tipoCliente": "no fitness"
+}
