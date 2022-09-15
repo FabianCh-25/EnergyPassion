@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  host_2: "http://localhost:5000/propietarios",
+  host_1: "http://localhost:5000/clientes"
 };
 
 /*
