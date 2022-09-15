@@ -100,24 +100,48 @@ module.exports = function () {
   trainers:
   [
     {
-    id:1,
-    namePropietario: "Luisa",
-    emailPropietario: "luisa@gmail.com"
+      id:20001,
+      name: "Peter Parker",
+      age: 22,
+      nickname: "P_Parker",
+      sexo: "masculino",
+      UsuarioPremium: false,
+      email: "pparker@gmail.com",
+      horario: 1,
+      idCalificacion: 70001
     },
     {
-    id:2,
-    namePropietario: "Juana",
-    emailPropietario: "Juana@gmail.com",
+      id:20002,
+      name: "PEdro García",
+      age: 22,
+      nickname: "P_García",
+      sexo: "masculino",
+      UsuarioPremium: false,
+      email: "pGarcía@gmail.com",
+      horario: 1,
+      idCalificacion: 70002
     },
     {
-    id:3,
-    namePropietario: "Pedro",
-    emailPropietario: "Pedro@gmail.com",
+      id:20003,
+      name: "FErnando Parker",
+      age: 22,
+      nickname: "F_Parker",
+      sexo: "masculino",
+      UsuarioPremium: false,
+      email: "fparker@gmail.com",
+      horario: 1,
+      idCalificacion: 70003
     },
     {
-    id:4,
-    namePropietario: "Jesus",
-    emailPropietario: "Jesus@gmail.com",
+      id:20004,
+      name: "Esquivel Lour",
+      age: 22,
+      nickname: "E_Per",
+      sexo: "masculino",
+      UsuarioPremium: false,
+      email: "E_Lour@gmail.com",
+      horario: 1,
+      idCalificacion: 70004
     }
   ]
   }

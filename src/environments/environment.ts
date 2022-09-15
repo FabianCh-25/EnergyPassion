@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host_2: "http://localhost:5000/propietarios",
+  host_2: "http://localhost:5000/trainers",
   host_1: "http://localhost:5000/clientes"
 };
 

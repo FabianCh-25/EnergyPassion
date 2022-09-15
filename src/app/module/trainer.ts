@@ -1,13 +1,12 @@
 export class Trainer{
-  {
-    id:10005,
-      name: "Peter Parker",
-      age: 22,
-      nickname: "P_Parker",
-      sexo: "masculino",
-      UsuarioPremium: false,
-      email: "pparker@gmail.com",
-      horario: 1,
-      idCalificacion: 70001
-    }
-}
+
+  id:number=0;
+  name:string = "";
+  age:number=0;
+  nickname:string="";
+  sexo:string="";
+  UsuarioPremium:boolean= false;
+  email:string= "";
+  horario:number= 1;
+  idCalificacion:number= 70001
+  }

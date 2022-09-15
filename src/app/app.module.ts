@@ -9,11 +9,15 @@ import { AppComponent } from './app.component';
 import { PropietarioListarComponent } from './page/propietario/propietario-listar/propietario-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule} from '@angular/material/table';
+import { TrainerComponent } from './page/trainer/trainer.component';
+import { TrainerListarComponent } from './page/trainer/trainer-listar/trainer-listar.component';
 @NgModule({
   declarations: [
     AppComponent,
     PropietarioComponent,
-    PropietarioListarComponent
+    PropietarioListarComponent,
+    TrainerComponent,
+    TrainerListarComponent
 
   ],
   imports: [
