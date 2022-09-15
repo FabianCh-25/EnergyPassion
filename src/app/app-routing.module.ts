@@ -1,7 +1,13 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { PropietarioComponent } from './page/propietario/propietario.component';
+import { TrainerComponent } from './page/trainer/trainer.component';
+const routes: Routes = [{
+  path: 'propietarios', component: PropietarioComponent,children:[]},
+  {
+  path: 'trainers',component: TrainerComponent, children:[]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
