@@ -4,7 +4,7 @@ export class Propietario{
   age:number=0;
   nickname:string="";
   sexo:string="";
-  UsuarioPremium:boolean= false;
+  Usuariotipo:boolean= false;
   email:string= "";
   enfermedadesExistenciales: boolean=false;
   enfermedades:string= "";
