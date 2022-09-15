@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PropietarioService {
-  private url:string=`${environment.host_2}`;
+  private url:string=`${environment.host_1}`;
 
   constructor(private http:HttpClient) {}
     listar(){

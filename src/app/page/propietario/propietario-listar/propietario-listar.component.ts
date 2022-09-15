@@ -10,7 +10,7 @@ import {MatTableDataSource} from '@angular/material/table'
 export class PropietarioListarComponent implements OnInit {
   lista:Propietario[]=[];
   dataSource:MatTableDataSource<Propietario>= new MatTableDataSource();
-  displayedColumns:string[]=['id','name' ,'email']
+  displayedColumns:string[]=['id','name','age','nickname','sexo','UsuarioPremium','email','enfermedadesExistenciales','enfermedades','talla','peso','tiempoDisponible','condicion','idSuscribcion','metaPrincipal','idRutina']
   constructor(private pSerice:PropietarioService) { }
 
   ngOnInit(): void {

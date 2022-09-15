@@ -1,3 +1,4 @@
+<h1>Lista de Clientes de EnergyPAssion</h1>
 <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
 
   <ng-container matColumnDef="id">
@@ -8,16 +9,80 @@
 
 
   <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> namePropietario </th>
-    <td mat-cell *matCellDef="let element"> {{element?.namePropietario}} </td>
+    <th mat-header-cell *matHeaderCellDef> name </th>
+    <td mat-cell *matCellDef="let element"> {{element?.name}} </td>
   </ng-container>
 
+
+  <ng-container matColumnDef="age">
+    <th mat-header-cell *matHeaderCellDef> age </th>
+    <td mat-cell *matCellDef="let element"> {{element?.age}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nickname">
+    <th mat-header-cell *matHeaderCellDef> nickname </th>
+    <td mat-cell *matCellDef="let element"> {{element?.nickname}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sexo">
+    <th mat-header-cell *matHeaderCellDef> sexo </th>
+    <td mat-cell *matCellDef="let element"> {{element?.sexo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="UsuarioPremium">
+    <th mat-header-cell *matHeaderCellDef> UsuarioPremium </th>
+    <td mat-cell *matCellDef="let element"> {{element?.UsuarioPremium}} </td>
+  </ng-container>
 
   <ng-container matColumnDef="email">
-    <th mat-header-cell *matHeaderCellDef> e-mailPropietario </th>
-    <td mat-cell *matCellDef="let element"> {{element?.emailPropietario}} </td>
+    <th mat-header-cell *matHeaderCellDef> email </th>
+    <td mat-cell *matCellDef="let element"> {{element?.email}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="enfermedadesExistenciales">
+    <th mat-header-cell *matHeaderCellDef> enfermedadesExistenciales </th>
+    <td mat-cell *matCellDef="let element"> {{element?.enfermedadesExistenciales}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="enfermedades">
+    <th mat-header-cell *matHeaderCellDef> enfermedades </th>
+    <td mat-cell *matCellDef="let element"> {{element?.enfermedades}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="talla">
+    <th mat-header-cell *matHeaderCellDef> talla </th>
+    <td mat-cell *matCellDef="let element"> {{element?.talla}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="peso">
+    <th mat-header-cell *matHeaderCellDef> peso </th>
+    <td mat-cell *matCellDef="let element"> {{element?.peso}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tiempoDisponible">
+    <th mat-header-cell *matHeaderCellDef> tiempoDisponible </th>
+    <td mat-cell *matCellDef="let element"> {{element?.tiempoDisponible}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="condicion">
+    <th mat-header-cell *matHeaderCellDef> condicion </th>
+    <td mat-cell *matCellDef="let element"> {{element?.condicion}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idSuscribcion">
+    <th mat-header-cell *matHeaderCellDef> idSuscribcion </th>
+    <td mat-cell *matCellDef="let element"> {{element?.idSuscribcion}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="metaPrincipal">
+    <th mat-header-cell *matHeaderCellDef> metaPrincipal </th>
+    <td mat-cell *matCellDef="let element"> {{element?.metaPrincipal}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idRutina">
+    <th mat-header-cell *matHeaderCellDef> idRutina </th>
+    <td mat-cell *matCellDef="let element"> {{element?.idRutina}} </td>
+  </ng-container>
 
   <ng-container matColumnDef="symbol">
 
