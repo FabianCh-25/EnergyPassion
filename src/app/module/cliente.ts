@@ -10,7 +10,7 @@ export class Cliente{
   email:string ="";
   disponibilidad:string= "";
   //Dis: "nn",
-  idSuscripcion:number=0;
+  Suscripcion_id:number=0;
   existEnfermedades:boolean= false;
   ListaEnfermedades:string="";
   talla:number=0 ;
