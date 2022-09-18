@@ -1,6 +1,6 @@
 module.exports = function () {
   var data = {
-  clientes:
+  clientez:
   [
     {
       id:10001,
@@ -144,10 +144,33 @@ module.exports = function () {
       horario: 1,
       idCalificacion: 70004
     }
-  ]
-  }
+  ],
 
-  return data
-},
-Cliente
-[]
+clientes: [{
+  id:10001,
+  nombre: "Luis Rodriguez",
+  apellido: "Rodriguez",
+  fechanacimiento: "01-04-2000",
+  edad: 22,
+  username: "L_rodri",
+  password: "12345678",
+  sexo: "masculino",
+  email: "luisa@gmail.com",
+  disponibilidad: "mañana",
+  //Dis: "nn",
+  Suscripción_id: 900004,
+  existEnfermedades: true,
+  ListaEnfermedades:"Diabetes II",
+  talla: 1.84 ,
+  peso: 114,
+  Condicion_fisica: "sobrePeso",
+  Objetivo_fisico: "bajar peso",
+  Rutina_id: 50001
+
+}]
+
+
+}
+//// esto va ultimo////
+return data
+}

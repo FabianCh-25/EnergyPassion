@@ -11,13 +11,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule} from '@angular/material/table';
 import { TrainerComponent } from './page/trainer/trainer.component';
 import { TrainerListarComponent } from './page/trainer/trainer-listar/trainer-listar.component';
+import { ClienteComponent } from './page/cliente/cliente.component';
+import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-listar.component';
 @NgModule({
   declarations: [
     AppComponent,
     PropietarioComponent,
     PropietarioListarComponent,
     TrainerComponent,
-    TrainerListarComponent
+    TrainerListarComponent,
+    ClienteComponent,
+    ClienteListarComponent
 
   ],
   imports: [
