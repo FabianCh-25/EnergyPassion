@@ -13,6 +13,12 @@ import { TrainerComponent } from './page/trainer/trainer.component';
 import { TrainerListarComponent } from './page/trainer/trainer-listar/trainer-listar.component';
 import { ClienteComponent } from './page/cliente/cliente.component';
 import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-listar.component';
+import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import{MatIconModule} from'@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +27,8 @@ import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-li
     TrainerComponent,
     TrainerListarComponent,
     ClienteComponent,
-    ClienteListarComponent
+    ClienteListarComponent,
+    ClienteCreaeditaComponent
 
   ],
   imports: [
@@ -30,6 +37,10 @@ import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-li
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
 
   ],
   providers: [],
