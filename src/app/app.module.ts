@@ -18,7 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
+import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     TrainerListarComponent,
     ClienteComponent,
     ClienteListarComponent,
-    ClienteCreaeditaComponent
+    ClienteCreaeditaComponent,
+    ClienteDialogoComponent
 
   ],
   imports: [
@@ -40,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
 
   ],
   providers: [],

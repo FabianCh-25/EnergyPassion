@@ -4,6 +4,7 @@ import { PropietarioComponent } from './page/propietario/propietario.component';
 import { TrainerComponent } from './page/trainer/trainer.component';
 import { ClienteComponent } from './page/cliente/cliente.component';
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
+import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
 const routes: Routes = [{
 
   path: 'clientes',component: ClienteComponent,children:[

@@ -10,6 +10,7 @@ import { Subject } from 'rxjs';
 export class ClienteService {
   private url:string=`${environment.host_clientes}`; //se crea variante url
   private listaCambio = new Subject<Cliente[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
 
 
   constructor(private http:HttpClient) { }
@@ -31,5 +32,14 @@ export class ClienteService {
   }
   listarId(id: number) {
     return this.http.get<Cliente>(`${this.url}/${id}`);
+  }
+  eliminarId(id:number) {
+    return this.http.delete(this.url+"/"+id);
+  }
+  getConfirmaEliminacion(){
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmarEliminacon(estado: Boolean){
+    this.confirmaEliminacion.next(estado);
   }
 }
