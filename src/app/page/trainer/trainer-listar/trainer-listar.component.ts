@@ -11,14 +11,17 @@ import {MatTableDataSource} from '@angular/material/table'
 export class TrainerListarComponent implements OnInit {
 lista:Trainer[]=[];
 dataSource:MatTableDataSource<Trainer>=new MatTableDataSource();
-displayedColumns:string[]=['id','name','age','nickname','sexo','UsuarioPremium','email','horario','idCalificacion']
-  constructor(private pService:TrainerService) { }
+displayedColumns:string[]=['id','name','age','nickname','sexo','UsuarioPremium','email','horario','idCalificacion','acciones']
+  constructor(private ps:TrainerService) { }
 
   ngOnInit(): void {
-    this.pService.listar().subscribe(data=>{
+    this.ps.listar().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
 
   })
+  this.ps.getLista().subscribe(data => {
+    this.dataSource = new MatTableDataSource(data);
+  });
 }
 
 }

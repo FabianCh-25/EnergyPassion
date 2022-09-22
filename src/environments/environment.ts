@@ -7,7 +7,7 @@ export const environment = {
   host_2: "http://localhost:5000/trainers",
   host_1: "http://localhost:5000/clientez",
   host_clientes: "http://localhost:5000/clientes",
-  host_tipoSubscripcion: "http://localhost:5000/tipo_subscripcion",
+  
 };
 
 /*
