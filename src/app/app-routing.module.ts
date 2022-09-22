@@ -1,4 +1,4 @@
-import { Tipo_Subscripcion } from './module/tipo_subscripcion';
+import { TipoSubscripcionComponent } from './page/tipo-subscripcion/tipo-subscripcion.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PropietarioComponent } from './page/propietario/propietario.component';
@@ -14,7 +14,7 @@ const routes: Routes = [{
     { path: 'nuevo', component: ClienteCreaeditaComponent }
   ]},
   {
-    path: 'tipo_subscripcion', component: Tipo_Subscripcion, children:[]
+    path: 'tipo_subscripcion', component: TipoSubscripcionComponent, children:[]
   }
 ];
 
