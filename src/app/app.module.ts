@@ -20,6 +20,7 @@ import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-buscar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     ClienteComponent,
     ClienteListarComponent,
     ClienteCreaeditaComponent,
-    ClienteDialogoComponent
+    ClienteDialogoComponent,
+    ClienteBuscarComponent
 
   ],
   imports: [

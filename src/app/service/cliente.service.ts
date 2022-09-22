@@ -2,7 +2,8 @@ import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; // de no aparecer lo agregas
 import { Cliente } from './../module/cliente'; //de no aparecer lo agreags
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
+import { EmptyExpr } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -41,5 +42,11 @@ export class ClienteService {
   }
   setConfirmarEliminacon(estado: Boolean){
     this.confirmaEliminacion.next(estado);
+  }
+  buscar(texto: string){
+    if(texto.length !=0) {
+      return this.http.post<Cliente[]>(`${this.url}/buscar`, texto.toLowerCase(),{});
+    }
+    return EMPTY;
   }
 }
