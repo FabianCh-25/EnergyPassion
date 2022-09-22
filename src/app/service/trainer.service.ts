@@ -10,6 +10,6 @@ export class TrainerService {
 private url:string=`${environment.host_2}`;
   constructor(private http:HttpClient) { }
   listar(){
-    return this.http.get<Trainer[]>(this.url);
+    return this.http.get<Trainer[]>(this.url)
   }
 }
