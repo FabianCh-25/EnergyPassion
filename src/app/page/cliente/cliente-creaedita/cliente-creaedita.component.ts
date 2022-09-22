@@ -12,6 +12,7 @@ export class ClienteCreaeditaComponent implements OnInit {
   cliente: Cliente = new Cliente();
   mensaje: string = "";
   edicion: boolean = false;
+
   id: number = 0;
 
 
