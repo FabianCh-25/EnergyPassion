@@ -26,4 +26,10 @@ export class ClienteService {
   getLista() {
     return this.listaCambio.asObservable();
   }
+  modificar(cliente: Cliente) {
+    return this.http.put(this.url + "/" + cliente.id, cliente);
+  }
+  listarId(id: number) {
+    return this.http.get<Cliente>(`${this.url}/${id}`);
+  }
 }

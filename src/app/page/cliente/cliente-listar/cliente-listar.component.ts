@@ -11,7 +11,7 @@ export class ClienteListarComponent implements OnInit {
   lista:Cliente[]=[];
   dataSource:MatTableDataSource<Cliente>=new MatTableDataSource();
   //el de abajo es displayed columns
-  displayedColumns: string[]=['id','nombre','apellido','fechanacimiento','edad','username','password','sexo','email','disponibilidad','Suscripcion_id','existEnfermedades','ListaEnfermedades','talla','peso','Condicion_fisica','Objetivo_fisico','Rutina_id']
+  displayedColumns: string[]=['id','nombre','apellido','fechanacimiento','edad','username','password','sexo','email','disponibilidad','Suscripcion_id','existEnfermedades','ListaEnfermedades','talla','peso','Condicion_fisica','Objetivo_fisico','Rutina_id','acciones']
   constructor(private pService:ClienteService) { }
 
   ngOnInit(): void {
