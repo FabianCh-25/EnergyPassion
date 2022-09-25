@@ -21,6 +21,10 @@ import { FormsModule } from '@angular/forms';
 import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-buscar.component';
+import { HomeComponent } from './page/home/home.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,8 @@ import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-bu
     ClienteListarComponent,
     ClienteCreaeditaComponent,
     ClienteDialogoComponent,
-    ClienteBuscarComponent
+    ClienteBuscarComponent,
+    HomeComponent
 
   ],
   imports: [
@@ -45,7 +50,9 @@ import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-bu
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatToolbarModule,
+    MatMenuModule
 
   ],
   providers: [],

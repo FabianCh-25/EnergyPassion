@@ -1,0 +1,30 @@
+<p>home works!</p>
+<!--router-outlet></!--router-outlet>
+<div [hidden]="route.children.length!==0">
+    <app-cliente-listar></app-cliente-listar> // se modifica
+</div>-->
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Energy PAssion (PE)</span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user fit icon">fitness_center</mat-icon>
+
+  </mat-toolbar-row>
+
+
+
+  <mat-toolbar-row>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="navegar('clientes')" >Clientes</button>
+  <button mat-menu-item>Trainers</button>
+  <button mat-menu-item>Rutinas</button>
+  <button mat-menu-item>item 4</button>
+  <button mat-menu-item>item 5</button>
+
+</mat-menu>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+
