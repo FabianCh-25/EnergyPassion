@@ -1,4 +1,3 @@
-<p>home works!</p>
 <!--router-outlet></!--router-outlet>
 <div [hidden]="route.children.length!==0">
     <app-cliente-listar></app-cliente-listar> // se modifica
@@ -17,9 +16,9 @@
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item (click)="navegar('clientes')" >Clientes</button>
-  <button mat-menu-item>Trainers</button>
+  <button mat-menu-item (click)="navegar('trainers')">Trainers</button>
   <button mat-menu-item>Rutinas</button>
-  <button mat-menu-item>item 4</button>
+  <button mat-menu-item (click)="navegar('propietarios')">item 4</button>
   <button mat-menu-item>item 5</button>
 
 </mat-menu>
