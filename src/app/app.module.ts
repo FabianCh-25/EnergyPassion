@@ -24,6 +24,7 @@ import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-bu
 import { HomeComponent } from './page/home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
+import { FooterComponent } from './page/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {MatMenuModule} from '@angular/material/menu';
     ClienteCreaeditaComponent,
     ClienteDialogoComponent,
     ClienteBuscarComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
 
   ],
   imports: [
