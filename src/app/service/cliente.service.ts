@@ -9,7 +9,9 @@ import { EmptyExpr } from '@angular/compiler';
   providedIn: 'root'
 })
 export class ClienteService {
-  private url:string=`${environment.host_clientes}`; //se crea variante url
+  private url:string=`http://localhost:5000/clientes`; //se crea variante url
+  //private url:string=`${environment.host_clientes}`;
+
   private listaCambio = new Subject<Cliente[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 

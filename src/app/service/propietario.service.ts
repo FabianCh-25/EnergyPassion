@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PropietarioService {
-  private url:string=`${environment.host_1}`;
+  private url:string=`http://localhost:5000/clientez`;
+  //private url:string=`${environment.host_1}`;
 
   constructor(private http:HttpClient) {}
     listar(){

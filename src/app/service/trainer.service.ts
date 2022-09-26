@@ -7,8 +7,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TrainerService {
-private url:string=`${environment.host_2}`;
-  constructor(private http:HttpClient) { }
+private url:string=`http://localhost:5000/trainers`;
+//private url:string=`${environment.host_trainers}`;
+constructor(private http:HttpClient) { }
   listar(){
     return this.http.get<Trainer[]>(this.url)
   }
