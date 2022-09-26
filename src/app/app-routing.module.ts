@@ -6,6 +6,7 @@ import { TrainerComponent } from './page/trainer/trainer.component';
 import { ClienteComponent } from './page/cliente/cliente.component';
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
 import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
+
 const routes: Routes = [
   //{path: 'menu', component: HomeComponent},
   {path: 'menu', component: HomeComponent,children:[]},
@@ -22,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
