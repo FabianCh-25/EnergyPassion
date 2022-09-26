@@ -18,13 +18,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import{MatIconModule} from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
+import { RutinasComponent } from './page/rutinas/rutinas.component';
+import { RutinasListarComponent } from './page/rutinas/rutinas-listar/rutinas-listar.component';
+import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
+import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-dialogo/rutinas-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-buscar.component';
-import { HomeComponent } from './page/home/home.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatMenuModule} from '@angular/material/menu';
-import { FooterComponent } from './page/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +34,10 @@ import { FooterComponent } from './page/footer/footer.component';
     ClienteComponent,
     ClienteListarComponent,
     ClienteCreaeditaComponent,
-    ClienteDialogoComponent,
-    ClienteBuscarComponent,
-    HomeComponent,
-    FooterComponent
+    RutinasComponent,
+    RutinasListarComponent,
+    RutinasCreaeditaComponent,
+    RutinasDialogoComponent
 
   ],
   imports: [
@@ -52,12 +50,11 @@ import { FooterComponent } from './page/footer/footer.component';
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule,
-    MatToolbarModule,
-    MatMenuModule
+    MatDialogModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
