@@ -1,0 +1,63 @@
+<div class="container">
+
+  <h1>Trainer</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="trainer.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="name" [(ngModel)]="trainer.name">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Edad</mat-label>
+    <input type="age" matInput required placeholder="age" [(ngModel)]="trainer.age">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>nickname</mat-label>
+    <input type="nickname" matInput required placeholder="nickname" [(ngModel)]="trainer.nickname">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>sexo</mat-label>
+    <input matInput placeholder="sex" [(ngModel)]="trainer.sexo">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>usuariopremium</mat-label>
+    <input type="usuariopremium" matInput required placeholder="usuariopremium" [(ngModel)]="trainer.UsuarioPremium">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Horario</mat-label>
+    <input matInput placeholder="horario" [(ngModel)]="trainer.horario">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Idcalificacion</mat-label>
+    <input matInput placeholder="Idcalificacion" [(ngModel)]="trainer.idCalificacion">
+  </mat-form-field>
+
+  <br>
+
+
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/trainer">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

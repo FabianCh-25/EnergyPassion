@@ -1,3 +1,4 @@
+import { TrainerCreaeditaComponent } from './page/trainer/trainer-creaedita/trainer-creaedita.component';
 import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
 import { HomeComponent } from './page/home/home.component';
 import { NgModule, Component } from '@angular/core';
@@ -20,7 +21,10 @@ const routes: Routes = [
   ]},
   {path: 'propietarios', component: PropietarioComponent,children:[]},
   {
-  path: 'trainers',component: TrainerComponent, children:[]},
+    path: 'trainer',component: TrainerComponent, children:[{ path: 'nuevo', component: TrainerCreaeditaComponent},
+    {path: 'edicion/:id', component: TrainerCreaeditaComponent  }
+
+  ]},
   {
     path: 'rutinas',component: RutinasComponent, children:[
       {path: 'nuevo', component: RutinasCreaeditaComponent},

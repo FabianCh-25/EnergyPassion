@@ -29,6 +29,7 @@ import { RutinasComponent } from './page/rutinas/rutinas.component';
 import { RutinasListarComponent } from './page/rutinas/rutinas-listar/rutinas-listar.component';
 import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
 import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-dialogo/rutinas-dialogo.component';
+import { TrainerCreaeditaComponent } from './page/trainer/trainer-creaedita/trainer-creaedita.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-d
     RutinasComponent,
     RutinasListarComponent,
     RutinasCreaeditaComponent,
-    RutinasDialogoComponent
+    RutinasDialogoComponent,
+    TrainerCreaeditaComponent
 
   ],
   imports: [
