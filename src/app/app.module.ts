@@ -25,6 +25,10 @@ import { HomeComponent } from './page/home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import { FooterComponent } from './page/footer/footer.component';
+import { RutinasComponent } from './page/rutinas/rutinas.component';
+import { RutinasListarComponent } from './page/rutinas/rutinas-listar/rutinas-listar.component';
+import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
+import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-dialogo/rutinas-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { FooterComponent } from './page/footer/footer.component';
     ClienteDialogoComponent,
     ClienteBuscarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    RutinasComponent,
+    RutinasListarComponent,
+    RutinasCreaeditaComponent,
+    RutinasDialogoComponent
 
   ],
   imports: [
