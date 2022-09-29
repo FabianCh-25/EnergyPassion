@@ -1,7 +1,9 @@
+import { TrainerDialogoComponent } from './trainer-dialogo/trainer-dialogo.component';
 import { TrainerService } from './../../../service/trainer.service';
 import { Trainer } from './../../../module/trainer';
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table'
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-trainer-listar',
@@ -11,17 +13,35 @@ import {MatTableDataSource} from '@angular/material/table'
 export class TrainerListarComponent implements OnInit {
 lista:Trainer[]=[];
 dataSource:MatTableDataSource<Trainer>=new MatTableDataSource();
-displayedColumns:string[]=['id','name','age','nickname','sexo','UsuarioPremium','email','horario','idCalificacion','acciones']
-  constructor(private ps:TrainerService) { }
+displayedColumns: string[] = ['id', 'name', 'age', 'nickname', 'sexo', 'UsuarioPremium', 'email', 'horario', 'idCalificacion', 'acciones', 'accion2'];
+  private idMayor: number = 0;
+  constructor(private ps: TrainerService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.ps.listar().subscribe(data=>{
-      this.dataSource=new MatTableDataSource(data);
+    this.ps.listar().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
 
-  })
-  this.ps.getLista().subscribe(data => {
-    this.dataSource = new MatTableDataSource(data);
-  });
-}
+    })
+    this.ps.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
+    this.ps.getConfirmaEliminacion().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
+
+  }
+
+  confirmar(id: number) {
+    this.idMayor = id;
+    this.dialog.open(TrainerDialogoComponent);
+  }
+
+  eliminar(id: number) {
+    this.ps.eliminar(id).subscribe(() => {
+      this.ps.listar().subscribe(data => {
+        this.ps.setLista(data);
+      })
+    });
+  }
 
 }
