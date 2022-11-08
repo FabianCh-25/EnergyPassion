@@ -1,0 +1,33 @@
+<p>subscripcion-creaedita works!</p>
+<div class="container">
+
+  <h1>Subscripcion</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="Subscripcion.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Precio Plan</mat-label>
+    <input  type="precio_plan" matInput required placeholder="precio_plan" [(ngModel)]="Subscripcion.precio_plan">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>descripcion Plan</mat-label>
+    <input type="descripcion_plan" matInput required placeholder="descripcion_plan" [(ngModel)]="Subscripcion.descripcion_plan">
+  </mat-form-field>
+
+  <br>
+ 
+  
+  
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/subscripcion">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

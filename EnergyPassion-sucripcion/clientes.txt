@@ -1,0 +1,105 @@
+module.exports = function () {
+  var data = {
+    propietarios: [
+      {
+        id:12124,
+       name: "Renzo Alfredo",
+       edad: "25",
+        nickname: "R_Alfredo",
+        email: "renzoalfredo@gmail.com"	   ,       
+        UsuarioPremium: true,
+        sexo: "masculino",   
+        idCalificacion: 55225
+	enfermedadesexistente: true,
+	enfermedades: "problema de tiroides",
+	talla:1.72,
+	peso:75.5,
+	tiempoDisponible:"mañanas",
+	condicion:"peso ideal",
+	idSubscripcion:21323,
+	metaPrincipal:"Ganar resistencia, Masa Muscular",
+	idRutina: 23423
+      },
+      {
+        id:97252,
+        name: "Haliban Huligan",
+       edad: "25",
+        nickname: "H_Huligan",
+        email: "huligan@gmail.com"	   ,       
+        UsuarioPremium: true,
+        sexo: "masculino",   
+        idCalificacion: 29898,
+	enfermedadesexistente: true,
+	enfermedades: "problemas de respiración",
+	talla:1.68,
+	peso:80.5,
+	tiempoDisponible:"tarde y noche",
+	condicion:"un poco de sobrepeso"
+	idSubscripcion:12453,
+	metaPrincipal:"Ser más fuerte y grande",
+	idRutina: 35565
+},
+      {
+        id:85722,
+         name: "Alexandra Fernandes",
+       edad: "34",
+        nickname: "A_Fernandes",
+        email: "afernandes@gmail.com"	   ,       
+        UsuarioPremium: false,
+        sexo: "femenino",
+        idCalificacion: 53434,
+	enfermedadesexistente: true,
+	enfermedades: "dolor en las articulaciones",
+	talla:1.56,
+	peso:68,
+	tiempoDisponible:"noche",
+	condicion:"sobrepeso",
+	idSubscripcion:14534,
+	metaPrincipal:"bajar de peso",
+	idRutina: 34324
+},
+{
+	id:76786,
+    	name: "Casimodo Carnel",
+        edad: "29",
+        nickname: "C_Carnel",
+        email: "carnel@gmail.com"	   ,       
+        UsuarioPremium: true,
+        sexo: "masculino",   
+        idCalificacion: 65713
+	enfermedadesexistente: false,
+	enfermedades: "",
+	talla:1.80,
+	peso:80.5,
+	tiempoDisponible:"tarde",
+	condicion:"un poco de sobrepeso",
+	idSubscripcion:21323,
+	metaPrincipal:"Ganar resistencia, Masa Muscular",
+	idRutina: 23423
+	},
+  {
+	id:68575,
+    	name: "Garmel Garcia",
+      	edad: "43",
+        nickname: "G_Garcia",
+        email: "garmelgarcia@gmail.com"	   ,       
+        UsuarioPremium: false,
+        sexo: "masculino",   
+        idCalificacion: 43456
+	enfermedadesexistente: true,
+	enfermedades: "Problemas del corazon",
+	talla:1.74,
+	peso:60.0,
+	tiempoDisponible:"mañanas",
+	condicion:"delgado",
+	idSubscripcion:27873,
+	metaPrincipal:"Preparación maratón",
+	idRutina: 23423
+	},
+       
+    ]
+  
+  }
+
+  return data
+}
