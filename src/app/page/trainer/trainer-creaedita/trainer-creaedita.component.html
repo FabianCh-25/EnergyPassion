@@ -14,13 +14,22 @@
     <input matInput required placeholder="name" [(ngModel)]="trainer.name">
 
   </mat-form-field>
-
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>apellido</mat-label>
+    <input type="apellido" matInput required placeholder="apellido" [(ngModel)]="trainer.apellido">
+  </mat-form-field>
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Edad</mat-label>
     <input type="age" matInput required placeholder="age" [(ngModel)]="trainer.age">
   </mat-form-field>
 
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>email</mat-label>
+    <input type="email" matInput required placeholder="email" [(ngModel)]="trainer.email">
+  </mat-form-field>
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>nickname</mat-label>
@@ -31,12 +40,6 @@
   <mat-form-field class="example-full-width">
     <mat-label>sexo</mat-label>
     <input matInput placeholder="sex" [(ngModel)]="trainer.sexo">
-  </mat-form-field>
-
-  <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>usuariopremium</mat-label>
-    <input type="usuariopremium" matInput required placeholder="usuariopremium" [(ngModel)]="trainer.UsuarioPremium">
   </mat-form-field>
 
   <br>
@@ -54,6 +57,12 @@
 
   <br>
 
+  <mat-form-field class="example-full-width">
+    <mat-label>IdRutinas</mat-label>
+    <input matInput placeholder="IdRutinas" [(ngModel)]="trainer.idRutinas">
+  </mat-form-field>
+
+  <br>
 
 
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>

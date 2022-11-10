@@ -1,12 +1,12 @@
 export class Trainer{
-
   id:number=0;
   name:string = "";
   age:number=0;
   nickname:string="";
   sexo:string="";
-  UsuarioPremium:boolean= false;
+  apellido:string= "";
   email:string= "";
-  horario:number= 1;
-  idCalificacion:number= 70001
+  horario:string= "";
+  idCalificacion:number= 70001;
+  idRutinas:number=70002
   }
