@@ -14,7 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class SubscripcionListarComponent implements OnInit {
   lista: Subscripcion[] = [];
   dataSource: MatTableDataSource<Subscripcion> = new MatTableDataSource();
-  displayedColumns: string[] = ['id','precio_plan','descripcion_plan','tipo_subscripcion_id','acciones', 'accion2'];
+  displayedColumns: string[] = ['id','precio_plan','descripcion_plan','tipo_subscripcion','acciones', 'accion2'];
   private idMayor: number = 0;
   constructor(private ps: SubscripcionService, private dialog: MatDialog) { }
 

@@ -32,13 +32,14 @@ export class SubscripcioncreaeditaComponent implements OnInit {
   aceptar(): void {
     if (this.Subscripcion.id > 0 ) {
       let p = new tiposuscripcion();
-      p.id = this.idtiposuscripcion;
+      p.id = this.idtiposuscripcion; //Aqui se toma como referencia el id de tipo de suscricpion
       this.Subscripcion.tiposuscripcion = p;
+      
       if  (this.edicion){
       this.SubscripcionService.modificar(this.Subscripcion).subscribe(data => {
         this.SubscripcionService.listar().subscribe(data => {
           this.SubscripcionService.setLista(data);
-        })
+        });
       })
     }
     else {

@@ -175,7 +175,7 @@ subscripcion: [
     id:33449999,
    precio_plan: 20,
 descripcion_plan:"premium",
-tipo_suscripcion_id:343,
+
   },
   {
     id:13563,

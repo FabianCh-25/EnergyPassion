@@ -1,5 +1,6 @@
-import { tiposuscripcion } from './../module/tiposuscripcion';
 import { Injectable } from '@angular/core';
+import { tiposuscripcion } from './../module/tiposuscripcion';
+
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Subject, EMPTY } from 'rxjs';
@@ -10,7 +11,7 @@ import { EmptyExpr } from '@angular/compiler';
 })
 export class TiposuscripcionService {
 
-  url: string = "http://localhost:5000/subscripcion"
+  url: string = "http://localhost:5000/tiposubscripcion"
   private listaCambio = new Subject<tiposuscripcion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
