@@ -1,3 +1,5 @@
+
+import { LoginComponent } from './page/login/login.component';
 import { TrainerCreaeditaComponent } from './page/trainer/trainer-creaedita/trainer-creaedita.component';
 import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
 import { HomeComponent } from './page/home/home.component';
@@ -29,7 +31,16 @@ const routes: Routes = [
     path: 'rutinas',component: RutinasComponent, children:[
       {path: 'nuevo', component: RutinasCreaeditaComponent},
       {path: 'edicion/:id', component:RutinasCreaeditaComponent}
+
+    ]},
+
+    {
+
+    path: 'login', component: LoginComponent
+    }
+
     ]}
+
 ];
 
 @NgModule({

@@ -56,6 +56,42 @@ module.exports = function () {
       metaPrincipal: "aumentar masa",
       idRutina: 50003
       },
+      {
+      id:10004,
+      name: "Bruce Wane",
+      age: 34,
+      nickname: "BWane",
+      sexo: "masculino",
+      UsuarioPremium: false,
+      email: "Bwane@gmail.com",
+      enfermedadesExistenciales: false,
+      enfermedades:"",
+      talla: 1.97 ,
+      peso: 108,
+      tiempoDisponible: "mañana",
+      condicion: "peso ideal",
+      idSuscribcion: 40004,
+      metaPrincipal: "aumentar masa",
+      idRutina: 50004
+      },
+    {
+    id:10005,
+      name: "Peter Parker",
+      age: 22,
+      nickname: "P_Parker",
+      sexo: "masculino",
+      UsuarioPremium: false,
+      email: "pparker@gmail.com",
+      enfermedadesExistenciales: false,
+      enfermedades:"",
+      talla: 1.74 ,
+      peso: 78,
+      tiempoDisponible: "noche",
+      condicion: "sobrePeso",
+      idSuscribcion: 40005,
+      metaPrincipañ: "bajar peso",
+      idRutina: 50005
+    }
 
 
   ],
@@ -112,7 +148,7 @@ module.exports = function () {
 
 clientes: [{
   id:10001,
-  nombre: "Luis ",
+  nombre: "Luis Rodriguez",
   apellido: "Rodriguez",
   fechanacimiento: "01-04-2000",
   edad: 22,
@@ -131,139 +167,15 @@ clientes: [{
   Objetivo_fisico: "bajar peso",
   Rutina_id: 50001
 
-},
-{
-  id:10001,
-  nombre: "Luisa ",
-  apellido: "Geniz",
-  fechanacimiento: "01-04-2002",
-  edad: 22,
-  username: "L_genys",
-  password: "12345678",
-  sexo: "femenino",
-  email: "luisaG@gmail.com",
-  disponibilidad: "tarde",
-  //Dis: "nn",
-  Suscripcion_id: 900005,
-  existEnfermedades: false,
-  ListaEnfermedades:"",
-  talla: 1.84 ,
-  peso: 80,
-  Condicion_fisica: "peso ideal",
-  Objetivo_fisico: "aumentar masa",
-  Rutina_id: 50002
+}],
 
-},
-{
+rutinas: [{
   id:10001,
-  nombre: "Fred ",
-  apellido: "Derses",
-  fechanacimiento: "01-04-1998",
-  edad: 25,
-  username: "F_dersrs",
-  password: "12345678",
-  sexo: "masculino",
-  email: "fredDersesa@gmail.com",
-  disponibilidad: "noche",
-  //Dis: "nn",
-  Suscripcion_id: 900005,
-  existEnfermedades: false,
-  ListaEnfermedades:"",
-  talla: 1.74 ,
-  peso: 94,
-  Condicion_fisica: "sobrePeso",
-  Objetivo_fisico: "bajar peso",
-  Rutina_id: 50005
-
-}
-,
-{
-  id:10001,
-  nombre: "Denilson",
-  apellido: "Vasquez",
-  fechanacimiento: "01-04-1999",
-  edad: 22,
-  username: "D_Vasquez",
-  password: "12345678",
-  sexo: "masculino",
-  email: "d_vasquez@gmail.com",
-  disponibilidad: "noche",
-  //Dis: "nn",
-  Suscripcion_id: 900004,
-  existEnfermedades: true,
-  ListaEnfermedades:"Diabetes I",
-  talla: 1.84 ,
-  peso: 90,
-  Condicion_fisica: "Obesidad",
-  Objetivo_fisico: "bajar peso",
-  Rutina_id: 50005
-
-},
-{
-  id:10001,
-  nombre: "Esmeralda ",
-  apellido: "Rodriguez",
-  fechanacimiento: "01-04-2002",
-  edad: 20,
-  username: "E_rodri",
-  password: "12345678",
-  sexo: "femenino",
-  email: "e_rodri@gmail.com",
-  disponibilidad: "mañana",
-  //Dis: "nn",
-  Suscripcion_id: 900007,
-  existEnfermedades: false,
-  ListaEnfermedades:"",
-  talla: 1.70 ,
-  peso: 65,
-  Condicion_fisica: "Bajo de peso",
-  Objetivo_fisico: "Aumentar masa",
-  Rutina_id: 50008
-
-},
-{
-  id:10001,
-  nombre: "Edgard ",
-  apellido: "Perez",
-  fechanacimiento: "01-04-1998",
-  edad: 22,
-  username: "E_perez",
-  password: "12345678",
-  sexo: "masculino",
-  email: "EPerez@gmail.com",
-  disponibilidad: "mañana",
-  //Dis: "nn",
-  Suscripcion_id: 900009,
-  existEnfermedades: true,
-  ListaEnfermedades:"Diabetes II",
-  talla: 1.84 ,
-  peso: 84,
-  Condicion_fisica: "Peso ideal",
-  Objetivo_fisico: "marcar cuerpo",
-  Rutina_id: 50006
-
-},
-{
-  id:10001,
-  nombre: "Roger ",
-  apellido: "Rodriguez",
-  fechanacimiento: "01-04-2000",
-  edad: 22,
-  username: "R_rodri",
-  password: "12345678",
-  sexo: "masculino",
-  email: "RRodri@gmail.com",
-  disponibilidad: "mañana",
-  //Dis: "nn",
-  Suscripcion_id: 900004,
-  existEnfermedades: true,
-  ListaEnfermedades:"Diabetes II",
-  talla: 1.94 ,
-  peso: 107,
-  Condicion_fisica: "sobrePeso",
-  Objetivo_fisico: "bajar peso",
-  Rutina_id: 5007
-
+  Trainer_id:111222,
+  Tren_superior:"pecho",
+  Tren_inferior:"Espalda",
+  Tiempo: 20
+  
 }]
 ,
 
@@ -275,7 +187,6 @@ rutinas: [{
   Tiempo: 20
 
 }]
-
 
 }
 //// esto va ultimo////

@@ -1,3 +1,4 @@
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 //import { PropietarioModule } from './model/propietario';
 import { PropietarioComponent } from './page/propietario/propietario.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -33,6 +34,10 @@ import { TrainerCreaeditaComponent } from './page/trainer/trainer-creaedita/trai
 import { TrainerBuscarComponent } from './page/trainer/trainer-buscar/trainer-buscar.component';
 import { TrainerDialogoComponent } from './page/trainer/trainer-listar/trainer-dialogo/trainer-dialogo.component';
 
+import { LoginComponent } from './page/login/login.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +58,12 @@ import { TrainerDialogoComponent } from './page/trainer/trainer-listar/trainer-d
     RutinasDialogoComponent,
     TrainerCreaeditaComponent,
     TrainerBuscarComponent,
+
+    TrainerDialogoComponent,
+    LoginComponent
+
     TrainerDialogoComponent
+
 
   ],
   imports: [
@@ -68,7 +78,8 @@ import { TrainerDialogoComponent } from './page/trainer/trainer-listar/trainer-d
     MatIconModule,
     MatDialogModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule
 
   ],
   providers: [],
