@@ -33,7 +33,10 @@ import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-d
 import { TrainerCreaeditaComponent } from './page/trainer/trainer-creaedita/trainer-creaedita.component';
 import { TrainerBuscarComponent } from './page/trainer/trainer-buscar/trainer-buscar.component';
 import { TrainerDialogoComponent } from './page/trainer/trainer-listar/trainer-dialogo/trainer-dialogo.component';
+
 import { LoginComponent } from './page/login/login.component';
+
+
 
 @NgModule({
   declarations: [
@@ -55,8 +58,12 @@ import { LoginComponent } from './page/login/login.component';
     RutinasDialogoComponent,
     TrainerCreaeditaComponent,
     TrainerBuscarComponent,
+
     TrainerDialogoComponent,
     LoginComponent
+
+    TrainerDialogoComponent
+
 
   ],
   imports: [

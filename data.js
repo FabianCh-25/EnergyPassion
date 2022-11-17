@@ -177,6 +177,16 @@ rutinas: [{
   Tiempo: 20
   
 }]
+,
+
+rutinas: [{
+  id:10001,
+  Trainer_id:111222,
+  Tren_superior:"pecho",
+  Tren_inferior:"Espalda",
+  Tiempo: 20
+
+}]
 
 }
 //// esto va ultimo////
