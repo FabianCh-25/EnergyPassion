@@ -11,6 +11,15 @@
     <br>
 
     <mat-form-field class="example-full-width">
+      <mat-label>Trainer_id</mat-label>
+      <input matInput required placeholder="Trainer_id"[(ngModel)]="rutinas.Trainer_id">
+
+    </mat-form-field>
+
+    <br>
+    <br>
+
+    <mat-form-field class="example-full-width">
       <mat-label>Tren_superior</mat-label>
       <input matInput required placeholder="Tren_superior" [(ngModel)]="rutinas.Tren_superior">
 
@@ -35,18 +44,6 @@
     </mat-form-field>
 
     <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Seleccione Trainer</mat-label>
-      <mat-select [(value)]="idTrainerSeleccionado" required>
-          <mat-option *ngFor="let p of listaTrainer" [value]="p.id">
-              {{p.name}}
-          </mat-option>
-      </mat-select>
-  </mat-form-field>
-  <br>
-
-
-
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
     <button mat-raised-button color="warn" routerLink="/rutinas">Cancelar</button>
     <p>{{mensaje}}</p>

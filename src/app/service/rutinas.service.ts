@@ -1,7 +1,7 @@
+import { rutinas } from '../module/rutinas';
 import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; // de no aparecer lo agregas
-import { rutinas } from './../module/rutinas'; //de no aparecer lo agreags
 import { Subject } from 'rxjs'
 
 @Injectable({
@@ -11,7 +11,7 @@ import { Subject } from 'rxjs'
 
 export class RutinasService {
 
-  private url:string=`${environment.host_rutinas}`; //se crea variante url
+  private url:string=`http://localhost:5000/rutinas`; //se crea variante url
   private listaCambio = new Subject<rutinas[]>()
   private confirmaEliminacion = new Subject<Boolean>()
 
@@ -45,7 +45,7 @@ export class RutinasService {
     this.confirmaEliminacion.next(estado);
   }
 
-  
+
 
 }
 
