@@ -18,7 +18,7 @@ export class SubscripcionBuscarComponent implements OnInit {
     let array: Subscripcion[] = [];
     this.SubscripcionService.listar().subscribe(data => {
       data.forEach((Element, index) => {
-        if(Element.descripcion_plan.includes(e.target.value)){
+        if(Element.Descripcion_plan.includes(e.target.value)){
           array.push(data[index]);
         }
       });

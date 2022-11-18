@@ -25,7 +25,7 @@ export class TiposuscripcioncreaeditaComponent implements OnInit {
     });
   }
   aceptar(): void {
-    if (this.tiposuscripcion.id > 0 ) {
+    if (this.tiposuscripcion.idTipoSuscripcion > 0 ) {
       if  (this.edicion){
       this.TiposuscripcionService.modificar(this.tiposuscripcion).subscribe(data => {
         this.TiposuscripcionService.listar().subscribe(data => {

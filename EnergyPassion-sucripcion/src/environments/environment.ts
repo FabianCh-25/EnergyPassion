@@ -6,9 +6,9 @@ export const environment = {
   production: false,
   host_2: "http://localhost:5000/trainers",
   host_1: "http://localhost:5000/clientez",
-  host_clientes: "http://localhost:5000/clientes",
-  host_subscripcion: "http://localhost:5000/subscripcion",
-  host_tiposuscripcion: "http://localhost:5000/tiposuscripcion",
+  host_clientes: "http://localhost:8083/clientes",
+  host_subscripcion: "http://localhost:8083/suscripcion",
+  host_tiposuscripcion: "http://localhost:8083/tiposuscripcion",
 };
 
 /*

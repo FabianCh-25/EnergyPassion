@@ -9,7 +9,7 @@ import { EmptyExpr } from '@angular/compiler';
   providedIn: 'root'
 })
 export class SubscripcionService {
-  url: string = "http://localhost:5000/subscripcion"
+  private url: string = `http://localhost:8083/suscripcion` //cambiar el puerto
   private listaCambio = new Subject<Subscripcion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -28,7 +28,7 @@ export class SubscripcionService {
     return this.listaCambio.asObservable();
   }
   modificar(Subscripcion:Subscripcion) {
-    return this.http.put(this.url + "/" + Subscripcion.id, Subscripcion);
+    return this.http.put(this.url + "/" + Subscripcion.idSuscripcion, Subscripcion);
   }
   Listarid(id:number) {
     return this.http.get<Subscripcion>( `${this.url}/${id}`);

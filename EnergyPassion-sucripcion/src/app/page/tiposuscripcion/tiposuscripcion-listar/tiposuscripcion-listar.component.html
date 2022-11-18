@@ -1,11 +1,11 @@
-<h1>Lista de Subscripcion de EnergyPAssion</h1>
+<h1>Lista de tipo Subscripcion de EnergyPAssion</h1>
 <app-tiposuscripcion-buscar></app-tiposuscripcion-buscar>
 <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
 
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
-
+    <td mat-cell *matCellDef="let element"> {{element?.idTipoSuscripcion}} </td>
+  <!-- Revisar si esta bien el id de descripcion yno esta cogiendo otro -->
   </ng-container>
   <ng-container matColumnDef="descripcion_tipo">
     <th mat-header-cell *matHeaderCellDef> descripcion_tipo </th>

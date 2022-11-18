@@ -2,7 +2,7 @@
 <app-subscripcion-buscar></app-subscripcion-buscar>
 <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
 
-  <ng-container matColumnDef="id">
+  <ng-container matColumnDef="idSuscripcion">
     <th mat-header-cell *matHeaderCellDef> ID </th>
     <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
 
@@ -19,9 +19,9 @@
     <td mat-cell *matCellDef="let element"> {{element?.descripcion_plan}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="tipo_suscripcion">
-    <th mat-header-cell *matHeaderCellDef> tipo_suscripcion</th>
-    <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+  <ng-container matColumnDef="tiposuscripcion">
+    <th mat-header-cell *matHeaderCellDef> tiposuscripcion</th>
+    <td mat-cell *matCellDef="let element"> {{element?.idTipoSuscripcion}} </td>
   </ng-container>
 
 
@@ -54,7 +54,7 @@
 <div class="example-button-container">
 
   <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-    routerLink="/subscripcion/nuevo">
+    routerLink="/suscripcion/nuevo">
     <mat-icon>plus_one</mat-icon>
   </button>
 </div>

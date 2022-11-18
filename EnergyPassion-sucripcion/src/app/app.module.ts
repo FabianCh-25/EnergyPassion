@@ -8,17 +8,25 @@ import { AppComponent } from './app.component';
 import { PropietarioListarComponent } from './page/propietario/propietario-listar/propietario-listar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule} from '@angular/material/table';
-import { TrainerComponent } from './page/trainer/trainer.component';
-import { TrainerListarComponent } from './page/trainer/trainer-listar/trainer-listar.component';
-import { ClienteComponent } from './page/cliente/cliente.component';
-import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-listar.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from'@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DateAdapter, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+
+import { ClienteComponent } from './page/cliente/cliente.component';
+import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-listar.component';
 import { TrainercreaeditaComponent } from './page/trainer/trainercreaedita/trainercreaedita.component';
 import { TrainerDialogoComponent } from './page/trainer/trainer-listar/trainer-dialogo/trainer-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { TrainerComponent } from './page/trainer/trainer.component';
+import { TrainerListarComponent } from './page/trainer/trainer-listar/trainer-listar.component';
 import { TrainerBuscarComponent } from './page/trainer/trainer-buscar/trainer-buscar.component';
 import { SubscripcionComponent } from './page/subscripcion/subscripcion.component';
 import { SubscripcionListarComponent } from './page/subscripcion/subscripcion-listar/subscripcion-listar.component';
@@ -65,7 +73,13 @@ import { TiposuscripcionDialogoComponent } from './page/tiposuscripcion/tiposusc
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatToolbarModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,11 +20,11 @@ const routes: Routes = [{
   {
   path: 'clientes',component: ClienteComponent,children:[]},
 
-  {path: 'subscripcion',component: SubscripcionComponent, children:
+  {path: 'suscripcion',component: SubscripcionComponent, children:
   [{ path: 'nuevo', component: SubscripcioncreaeditaComponent},
   {path: 'edicion/:id', component: SubscripcioncreaeditaComponent} ]},
   
-  {path: 'tiposubscripcion',component: TiposuscripcionComponent, children:
+  {path: 'tiposuscripcion',component: TiposuscripcionComponent, children:
   [{ path: 'nuevo', component: TiposuscripcioncreaeditaComponent},
   {path: 'edicion/:id', component: TiposuscripcioncreaeditaComponent} ]},
 

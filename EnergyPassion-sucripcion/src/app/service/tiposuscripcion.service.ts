@@ -11,7 +11,7 @@ import { EmptyExpr } from '@angular/compiler';
 })
 export class TiposuscripcionService {
 
-  url: string = "http://localhost:5000/tiposubscripcion"
+  private url: string = `http://localhost:8083/tiposuscripcion`//cambiar url
   private listaCambio = new Subject<tiposuscripcion[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -30,13 +30,13 @@ export class TiposuscripcionService {
     return this.listaCambio.asObservable();
   }
   modificar(tiposuscripcion:tiposuscripcion) {
-    return this.http.put(this.url + "/" + tiposuscripcion.id, tiposuscripcion);
+    return this.http.put(this.url + "/" + tiposuscripcion.idTipoSuscripcion, tiposuscripcion);
   }
   Listarid(id:number) {
     return this.http.get<tiposuscripcion>( `${this.url}/${id}`);
   }
   eliminar(id:number){
-    return this.http.delete(this.url + "/" + id);
+    return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmaEliminacion(){
     return this.confirmaEliminacion.asObservable();

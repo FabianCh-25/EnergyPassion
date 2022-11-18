@@ -4,6 +4,7 @@ import { Subscripcion } from 'src/app/module/subscripcion';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Params, Router } from '@angular/router';
 import { TiposuscripcionService } from 'src/app/service/tiposuscripcion.service';
+
 //import * as moment from 'moment';
 
 @Component({
@@ -28,12 +29,13 @@ export class SubscripcioncreaeditaComponent implements OnInit {
       this.edicion = data['id'] !=null;
       this.init();
     });
+    this.TiposuscripcionService.listar().subscribe(data => { this.listatiposuscripcion = data });
   }
   aceptar(): void {
-    if (this.Subscripcion.id > 0 ) {
+    if (this.Subscripcion.idSuscripcion > 0 ) {
       let p = new tiposuscripcion();
-      p.id = this.idtiposuscripcion; //Aqui se toma como referencia el id de tipo de suscricpion
-      this.Subscripcion.tiposuscripcion = p;
+      p.idTipoSuscripcion = this.idtiposuscripcion; //Aqui se toma como referencia el id de tipo de suscricpion
+      this.Subscripcion.Tiposuscripcion = p;
       
       if  (this.edicion){
       this.SubscripcionService.modificar(this.Subscripcion).subscribe(data => {
@@ -52,7 +54,7 @@ export class SubscripcioncreaeditaComponent implements OnInit {
         console.log(err);
       })
     }
-      this.router.navigate(['subscripcion']);
+      this.router.navigate(['suscripcion']); //router
     } else {
       this.mensaje = "Complete los valores requeridos";
     }
@@ -63,7 +65,7 @@ export class SubscripcioncreaeditaComponent implements OnInit {
       this.SubscripcionService.Listarid(this.id).subscribe(data => {
         this.Subscripcion = data
         console.log(data);
-        this.idtiposuscripcion = data.tiposuscripcion.id;
+        this.idtiposuscripcion = data.Tiposuscripcion.idTipoSuscripcion;
       })
     }
   }
