@@ -1,9 +1,9 @@
+import { CalificacionDialogoComponent } from './calificacion-dialogo/calificacion-dialogo.component';
 import { Component, OnInit } from '@angular/core';
 import { CalificacionService } from './../../../service/calificacion.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Calificacion } from './../../../module/calificacion';
 import { MatDialog } from '@angular/material/dialog';
-import { CalificaciondeleteComponent } from '../../calificacion/calificacionlistar/calificaciondelete/calificaciondelete.component';
 @Component({
   selector: 'app-calificacionlistar',
   templateUrl: './calificacionlistar.component.html',
@@ -29,7 +29,7 @@ export class CalificacionlistarComponent implements OnInit {
   }
   confirmar(id:number){
     this.idMayor = id;
-    this.dialog.open(CalificaciondeleteComponent);
+    this.dialog.open(CalificacionDialogoComponent);
   }
   
   eliminar(id:number)

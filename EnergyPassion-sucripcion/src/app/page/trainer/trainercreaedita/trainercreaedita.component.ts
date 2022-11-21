@@ -4,6 +4,8 @@ import { TrainerService } from './../../../service/trainer.service';
 import { Trainer } from 'src/app/module/trainer';
 import { Calificacion } from 'src/app/module/calificacion';
 import { CalificacionService } from 'src/app/service/calificacion.service';
+import { RutinasService } from 'src/app/service/rutinas.service';
+import { rutinas } from 'src/app/module/rutinas';
 //AGREGAR COMPONENTES
 @Component({
   selector: 'app-trainercreaedita',
@@ -17,10 +19,10 @@ export class TrainercreaeditaComponent implements OnInit {
   id: number = 0;
   listacalficacion: Calificacion[] = [];
   idcalificacionselec: number = 0;
-  listarutina: Rutina[] = [];
+  listarutina: rutinas[] = [];
   idrutinaselec: number = 0;
   constructor(private trainerService: TrainerService,private route:ActivatedRoute,
-    private router: Router, private CalificacionService: CalificacionService) { }
+    private router: Router, private CalificacionService: CalificacionService,private RutinasService: RutinasService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data:Params) => {
@@ -29,13 +31,14 @@ export class TrainercreaeditaComponent implements OnInit {
       this.init();
     });
     this.CalificacionService.listar().subscribe(data => { this.listacalficacion = data });
+    this.RutinasService.listar().subscribe(data => { this.listarutina = data });
   }
   aceptar(): void {
     if (this.trainer.idtrainer > 0 && this.trainer.name.length>0) {
       let c = new Calificacion();
       c.idcalificacion = this.idcalificacionselec;
       this.trainer.calificacion = c;
-      let r = new Rutinas();
+      let r = new rutinas();
       r.idrutinas = this.idrutinaselec;
       this.trainer.calificacion = c;
       if  (this.edicion){

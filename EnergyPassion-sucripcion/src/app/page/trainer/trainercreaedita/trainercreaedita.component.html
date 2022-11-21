@@ -5,21 +5,21 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="Id" [(ngModel)]="trainer.idtrainer">
+    <input matInput placeholder="idtrainer" [(ngModel)]="trainer.idtrainer">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Nombre</mat-label>
-    <input matInput required placeholder="name" [(ngModel)]="trainer.name">
+    <input matInput required placeholder="nombre" [(ngModel)]="trainer.name">
 
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Edad</mat-label>
-    <input type="age" matInput required placeholder="age" [(ngModel)]="trainer.age">
+    <input type="edad" matInput required placeholder="edad" [(ngModel)]="trainer.edad">
   </mat-form-field>
 
   <br>
@@ -31,7 +31,7 @@
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>sexo</mat-label>
-    <input matInput placeholder="sex" [(ngModel)]="trainer.sexo">
+    <input matInput placeholder="sexo" [(ngModel)]="trainer.sexo">
   </mat-form-field>
 
   
@@ -57,8 +57,8 @@
   <mat-form-field appearance="fill">
     <mat-label>Seleccione Rutinas</mat-label>
     <mat-select [(value)]="idrutinaselec" required>
-        <mat-option *ngFor="let r of listarutina" [value]="r.idrutinaselec">
-            {{r.idrutinaselec}}
+        <mat-option *ngFor="let r of listarutina" [value]="r.idrutinas">
+            {{r.idrutinas}}
         </mat-option>
     </mat-select>
 </mat-form-field>
