@@ -4,12 +4,13 @@
 
 export const environment = {
   production: false,
-  host_2: "http://localhost:5000/trainers",
-  host_1: "http://localhost:5000/clientez",
+  host_2: "http://localhost:8083/trainers",
   host_clientes: "http://localhost:8083/clientes",
   host_subscripcion: "http://localhost:8083/suscripcion",
   host_tiposuscripcion: "http://localhost:8083/tiposuscripcion",
   host_calificaciones: "http://localhost:8083/calificaciones",
+  rutinas: "http://localhost:8083/rutinas",
+  reserva: "http://localhost:8083/reserva",
 };
 
 /*
