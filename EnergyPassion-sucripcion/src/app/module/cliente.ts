@@ -1,5 +1,9 @@
+import { subscripcion } from './subscripcion';
+import { rutinas } from "./rutinas";
+
+
 export class Cliente{
-  id:number =0;
+  idcliente:number =0;
   nombre:string= "";
   apellido:string=  "";
   fechanacimiento:string="" ;
@@ -8,15 +12,11 @@ export class Cliente{
   password:string= "";
   sexo:string= "";
   email:string ="";
-  disponibilidad:string= "";
-  //Dis: "nn",
-  Suscripcion_id:number=0;
-  existEnfermedades:boolean= false;
-  ListaEnfermedades:string="";
   talla:number=0 ;
   peso: number=0;
-  Condicion_fisica:string= "";
-  Objetivo_fisico:string= "";
-  Rutina_id:number=0;
+  condfisica:string= "";
+  objetivofisico:string= "";
 
+  rutinas:rutinas =new rutinas();
+  subscripcion:subscripcion =new subscripcion();
   }
