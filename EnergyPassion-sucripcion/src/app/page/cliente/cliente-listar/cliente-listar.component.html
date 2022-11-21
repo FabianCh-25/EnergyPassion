@@ -1,9 +1,11 @@
 <h1>Lista de Clientes de EnergyPassion</h1>
+<app-cliente-buscar></app-cliente-buscar>
+
 <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
 
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+    <td mat-cell *matCellDef="let element"> {{element?.icliente}} </td>
 
   </ng-container>
 
@@ -34,10 +36,6 @@
     <td mat-cell *matCellDef="let element"> {{element?.username}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="password">
-    <th mat-header-cell *matHeaderCellDef> Password </th>
-    <td mat-cell *matCellDef="let element"> {{element?.password}} </td>
-  </ng-container>
 
   <ng-container matColumnDef="sexo">
     <th mat-header-cell *matHeaderCellDef> Sexo </th>
@@ -49,60 +47,59 @@
     <td mat-cell *matCellDef="let element"> {{element?.email}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="disponibilidad">
-    <th mat-header-cell *matHeaderCellDef> disponibilidad </th>
-    <td mat-cell *matCellDef="let element"> {{element?.disponibilidad}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="Suscripcion_id">
-    <th mat-header-cell *matHeaderCellDef> idSuscripcion </th>
-    <td mat-cell *matCellDef="let element"> {{element?.Suscripcion_id}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="existEnfermedades">
-    <th mat-header-cell *matHeaderCellDef> existEnfermedades </th>
-    <td mat-cell *matCellDef="let element"> {{element?.existEnfermedades}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="ListaEnfermedades">
-    <th mat-header-cell *matHeaderCellDef> ListaEnfermedades </th>
-    <td mat-cell *matCellDef="let element"> {{element?.ListaEnfermedades}} </td>
-  </ng-container>
+ 
 
   <ng-container matColumnDef="talla">
-    <th mat-header-cell *matHeaderCellDef> talla </th>
+    <th mat-header-cell *matHeaderCellDef> Talla </th>
     <td mat-cell *matCellDef="let element"> {{element?.talla}} </td>
   </ng-container>
 
   <ng-container matColumnDef="peso">
-    <th mat-header-cell *matHeaderCellDef> peso </th>
+    <th mat-header-cell *matHeaderCellDef> Peso </th>
     <td mat-cell *matCellDef="let element"> {{element?.peso}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Condicion_fisica">
-    <th mat-header-cell *matHeaderCellDef> Condicion_fisica </th>
-    <td mat-cell *matCellDef="let element"> {{element?.Condicion_fisica}} </td>
+    <th mat-header-cell *matHeaderCellDef> Condicion física </th>
+    <td mat-cell *matCellDef="let element"> {{element?.condfisica}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Objetivo_fisico">
-    <th mat-header-cell *matHeaderCellDef> Objetivo_fisico </th>
-    <td mat-cell *matCellDef="let element"> {{element?.Objetivo_fisico}} </td>
+    <th mat-header-cell *matHeaderCellDef> Objetivo </th>
+    <td mat-cell *matCellDef="let element"> {{element?.objetivofisico}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="Rutina_id">
-    <th mat-header-cell *matHeaderCellDef> Rutina_id </th>
-    <td mat-cell *matCellDef="let element"> {{element?.Rutina_id}} </td>
+  <ng-container matColumnDef="rutinas">
+    <th mat-header-cell *matHeaderCellDef> rutinas </th>
+    <td mat-cell *matCellDef="let element"> {{element.rutinas.idrutinas}} </td>
+</ng-container>
+  <ng-container matColumnDef="subscripcion">
+    <th mat-header-cell *matHeaderCellDef> Subscripcion </th>
+    <td mat-cell *matCellDef="let element"> {{element.subscripcion.idsuscripcion}} </td>
+</ng-container>
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+        [routerLink]="['edicion', element?.idcliente]">Actualizar</button>
+    </td>
   </ng-container>
 
-  <ng-container matColumnDef="symbol">
-
-    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-
-    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-
+  <ng-container matColumnDef="acciones2">
+    <th mat-header-cell *matHeaderCellDef> Acciones2 </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="warn"
+      (click)="confirmar(element.id)">Eliminar</button>
+    </td>
   </ng-container>
+
 
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+<div class="example-button-container">
+
+  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    routerLink="/clientes/nuevo">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>

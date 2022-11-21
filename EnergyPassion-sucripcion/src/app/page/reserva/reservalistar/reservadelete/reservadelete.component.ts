@@ -12,7 +12,7 @@ export class ReservadeleteComponent {
   ngOnInit(): void {
   }
   confirmar(estado: boolean){
-    this.reservaS.setConfirmarEliminacon(estado);
+    this.reservaS.setConfirmaEliminacion(estado);
     this.MatDialogRef.close();
   }
 }

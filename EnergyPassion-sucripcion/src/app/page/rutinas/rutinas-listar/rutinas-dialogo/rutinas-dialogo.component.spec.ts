@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClienteListarComponent } from './cliente-listar.component';
+import { RutinasDialogoComponent } from './rutinas-dialogo.component';
 
-describe('ClienteListarComponent', () => {
-  let component: ClienteListarComponent;
-  let fixture: ComponentFixture<ClienteListarComponent>;
+describe('RutinasDialogoComponent', () => {
+  let component: RutinasDialogoComponent;
+  let fixture: ComponentFixture<RutinasDialogoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClienteListarComponent ]
+      declarations: [ RutinasDialogoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ClienteListarComponent);
+    fixture = TestBed.createComponent(RutinasDialogoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

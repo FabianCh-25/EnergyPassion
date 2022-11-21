@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class ReservalistarComponent {
 lista: Reserva[]=[];
 dataSource:MatTableDataSource<Reserva>=new MatTableDataSource();
-DisplayedColumns:string[]=['idReserva','Fecha','Hora',' Cliente','Trainer','acciones','acciones2']
+DisplayedColumns:string[]=['idreserva','fecha','hora', 'mensaje','cliente','trainer','rutinas','acciones','acciones2']
 private idMayor:number=0;
 constructor (private pService:ReservaService,private dialog:MatDialog){}
 ngOnInit(): void{
@@ -30,7 +30,7 @@ confirmar(id:number){
 }
 eliminar(id:number)
 {
-  this.pService.eliminarId(id).subscribe(()=>{
+  this.pService.eliminar(id).subscribe(()=>{
     this.pService.listar().subscribe(data=>{
       this.pService.setLista(data);
     })
