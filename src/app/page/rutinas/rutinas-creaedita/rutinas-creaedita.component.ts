@@ -29,7 +29,7 @@ export class RutinasCreaeditaComponent implements OnInit {
   }
   aceptar():void{
 
-    if (this.rutinas.id > 0 && this.rutinas.Trainer_id > 0 && this.rutinas.Tren_superior.length > 0 && this.rutinas.Tren_inferior.length > 0 && this.rutinas.Tiempo > 0) {
+    if (this.rutinas.id > 0 && this.rutinas.Tren_superior.length > 0 && this.rutinas.Tren_inferior.length > 0 && this.rutinas.Tiempo > 0) {
       if(this.edicion){
         this.rutinasService.modificar(this.rutinas).subscribe(data=>{
           this.rutinasService.listar().subscribe(data=>{

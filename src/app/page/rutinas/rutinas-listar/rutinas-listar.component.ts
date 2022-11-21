@@ -15,7 +15,7 @@ export class RutinasListarComponent implements OnInit {
   lista:rutinas[]=[];
   dataSource:MatTableDataSource<rutinas>=new MatTableDataSource();
 
-  displayedColumns: string[]=['id','Trainer_id','Tren_superior','Tren_inferior','Tiempo','acciones', 'acciones2']
+  displayedColumns: string[]=['id','Tren_superior','Tren_inferior','Tiempo','acciones', 'acciones2']
   private idMayor: number=0;
   constructor(private pService:RutinasService, private dialog: MatDialog) { }
 
