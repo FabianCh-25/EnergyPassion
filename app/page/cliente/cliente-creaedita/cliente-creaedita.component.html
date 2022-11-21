@@ -1,0 +1,124 @@
+<h2>Complete todo los campos por favor</h2>
+<div class="container">
+
+  <h1>Clientes  </h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" [(ngModel)]="cliente.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="name" [(ngModel)]="cliente.nombre">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Apellidos</mat-label>
+    <input matInput required placeholder="email" [(ngModel)]="cliente.apellido">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Fecha Nacimiento</mat-label>
+    <input type="date" matInput required placeholder="dia/mes/año" [(ngModel)]="cliente.fechanacimiento">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Edad</mat-label>
+    <input matInput required placeholder="años" [(ngModel)]="cliente.edad">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput required placeholder="username" [(ngModel)]="cliente.username">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput required placeholder="password" [(ngModel)]="cliente.password">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Sexo</mat-label>
+    <input type="text" matInput required placeholder="Sexo" [(ngModel)]="cliente.sexo">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput required placeholder="email" [(ngModel)]="cliente.email">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Disponibilidad</mat-label>
+    <input type="text" matInput required placeholder="mañna/tarde/noche" [(ngModel)]="cliente.disponibilidad">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Id Suscripción</mat-label>
+    <input type="text" matInput required placeholder=" id" [(ngModel)]="cliente.Suscripcion_id">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Padece enfermedades</mat-label>
+    <input type="text" matInput required placeholder=" true or false" [(ngModel)]="cliente.existEnfermedades">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label> Enfermedades</mat-label>
+    <input type="text" matInput required placeholder=" enfermedades" [(ngModel)]="cliente.ListaEnfermedades">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Talla</mat-label>
+    <input  matInput required placeholder=" cm" [(ngModel)]="cliente.talla">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Peso</mat-label>
+    <input  matInput required placeholder=" kg" [(ngModel)]="cliente.peso">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Condicion fisica</mat-label>
+    <input type="text " matInput required placeholder=" gordo/flaco/obeso" [(ngModel)]="cliente.Condicion_fisica">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Objetivo</mat-label>
+    <input type="text " matInput required placeholder=" bajar peso" [(ngModel)]="cliente.Objetivo_fisico">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Rutinas id</mat-label>
+    <input type="text " matInput required placeholder=" R_000" [(ngModel)]="cliente.Rutina_id">
+  </mat-form-field>
+
+
+
+
+  <br>
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/clientes">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>
+
