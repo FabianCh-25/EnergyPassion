@@ -1,6 +1,6 @@
 import { SubscripcionDialogoComponent } from './subscripcion-dialogo/subscripcion-dialogo.component';
 import { SubscripcionService } from './../../../service/subscripcion.service';
-import { Subscripcion } from './../../../module/subscripcion';
+import { subscripcion } from './../../../module/subscripcion';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table'
 import { MatDialog } from '@angular/material/dialog';
@@ -12,9 +12,9 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./subscripcion-listar.component.css']
 })
 export class SubscripcionListarComponent implements OnInit {
-  lista: Subscripcion[] = [];
-  dataSource: MatTableDataSource<Subscripcion> = new MatTableDataSource();
-  displayedColumns: string[] = ['idSuscripcion','precio_plan','descripcion_plan','tiposuscripcion','acciones', 'accion2'];
+  lista: subscripcion[] = [];
+  dataSource: MatTableDataSource<subscripcion> = new MatTableDataSource();
+  displayedColumns: string[] = ['idsuscripcion','precio_plan','descripcion_plan','tiposuscripcion','acciones', 'accion2'];
   private idMayor: number = 0;
   constructor(private ps: SubscripcionService, private dialog: MatDialog) { }
 

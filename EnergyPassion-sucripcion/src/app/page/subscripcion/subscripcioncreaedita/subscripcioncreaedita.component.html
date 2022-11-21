@@ -1,33 +1,33 @@
 
 <div class="container">
 
-  <h1>Subscripcion</h1>
+  <h1>Suscripcion</h1>
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="idSuscripcion" [(ngModel)]="Subscripcion.idSuscripcion">
+    <input matInput placeholder="idSuscripcion" [(ngModel)]="subscripcion.idsuscripcion">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Precio Plan</mat-label>
-    <input  matInput required placeholder="Precio_plan" [(ngModel)]="Subscripcion.Precio_plan">
+    <input  matInput required placeholder="precio_del_plan" [(ngModel)]="subscripcion.precio_plan">
 
   </mat-form-field>
 
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>descripcion Plan</mat-label>
-    <input matInput required placeholder="Descripcion_plan" [(ngModel)]="Subscripcion.Descripcion_plan">
+    <input matInput required placeholder="descripcion_plan" [(ngModel)]="subscripcion.descripcion_plan">
   </mat-form-field>
 
   <br>
   <mat-form-field appearance="fill">
-    <mat-label>Seleccione Tipo suscripcion</mat-label>
-    <mat-select [(value)]="idtiposuscripcion" required>
-        <mat-option *ngFor="let p of listatiposuscripcion" [value]="p.idTipoSuscripcion">
-            {{p.idTipoSuscripcion}}
+    <mat-label>Seleccione Tipo Suscripcion</mat-label>
+    <mat-select [(value)]="idtiposuscripcionselec" required>
+        <mat-option *ngFor="let p of listatiposuscripcion" [value]="p.idtiposuscripcion">
+          {{p.idtiposuscripcion}}
         </mat-option>
     </mat-select>
 </mat-form-field>

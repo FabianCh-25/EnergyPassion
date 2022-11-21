@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class TrainerListarComponent implements OnInit {
   lista: Trainer[] = [];
   dataSource: MatTableDataSource<Trainer> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'name', 'age', 'nickname', 'sexo', 'UsuarioPremium', 'email', 'horario', 'idCalificacion', 'acciones', 'accion2'];
+  displayedColumns: string[] = ['id', 'name', 'apellido', 'horario', 'edad', 'nickname', 'sexo', 'email', 'horario', 'password','idcalificacion', 'rutinas','acciones', 'accion2'];
   private idMayor: number = 0;
   constructor(private ps: TrainerService, private dialog: MatDialog) { }
 

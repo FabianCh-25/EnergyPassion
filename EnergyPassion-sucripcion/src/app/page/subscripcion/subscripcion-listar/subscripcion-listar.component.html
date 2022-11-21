@@ -1,27 +1,28 @@
-<h1>Lista de Subscripcion de EnergyPAssion</h1>
+<div class="container">
+<h1>Lista de Suscripcion de EnergyPAssion</h1>
 <app-subscripcion-buscar></app-subscripcion-buscar>
 <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
 
-  <ng-container matColumnDef="idSuscripcion">
+  <ng-container matColumnDef="idsuscripcion">
     <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element?.id}} </td>
+    <td mat-cell *matCellDef="let element"> {{element?.idSuscripcion}} </td>
 
   </ng-container>
 
   <ng-container matColumnDef="precio_plan">
     <th mat-header-cell *matHeaderCellDef> precio_plan </th>
-    <td mat-cell *matCellDef="let element"> {{element?.precio_plan}}</td>
+    <td mat-cell *matCellDef="let element"> {{element?.precio_del_plan}}</td>
   </ng-container>
 
 
   <ng-container matColumnDef="descripcion_plan">
     <th mat-header-cell *matHeaderCellDef> descripcion_plan </th>
-    <td mat-cell *matCellDef="let element"> {{element?.descripcion_plan}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.descripcion_plan}} </td>
   </ng-container>
 
   <ng-container matColumnDef="tiposuscripcion">
-    <th mat-header-cell *matHeaderCellDef> tiposuscripcion</th>
-    <td mat-cell *matCellDef="let element"> {{element?.idTipoSuscripcion}} </td>
+    <th mat-header-cell *matHeaderCellDef> Tipo Suscripcion</th>
+    <td mat-cell *matCellDef="let element"> {{element.tipoSuscripcion.idTipoSuscripcion}} </td>
   </ng-container>
 
 
@@ -36,14 +37,14 @@
   <ng-container matColumnDef="acciones">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="primary" [routerLink]="['edicion', element?.id]"> Actualizar</button>
+      <button mat-raised-button color="primary" [routerLink]="['edicion', element?.idSuscripcion]"> Actualizar</button>
     </td> 
   </ng-container>
   
   <ng-container matColumnDef="accion2">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="warn" (click)="confirmar(element.id)"> Eliminar</button>
+      <button mat-raised-button color="warn" (click)="confirmar(element.idSuscripcion)"> Eliminar</button>
     </td> 
   </ng-container>
 
@@ -57,4 +58,5 @@
     routerLink="/suscripcion/nuevo">
     <mat-icon>plus_one</mat-icon>
   </button>
+</div>
 </div>

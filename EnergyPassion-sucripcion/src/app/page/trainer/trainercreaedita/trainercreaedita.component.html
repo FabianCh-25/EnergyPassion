@@ -5,7 +5,7 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="Id" [(ngModel)]="trainer.id">
+    <input matInput placeholder="Id" [(ngModel)]="trainer.idtrainer">
   </mat-form-field>
 
   <br>
@@ -34,12 +34,7 @@
     <input matInput placeholder="sex" [(ngModel)]="trainer.sexo">
   </mat-form-field>
 
-  <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>usuariopremium</mat-label>
-    <input type="usuariopremium" matInput required placeholder="usuariopremium" [(ngModel)]="trainer.UsuarioPremium">
-  </mat-form-field>
-
+  
   <br>
   <mat-form-field class="example-full-width">
     <mat-label>Horario</mat-label>
@@ -48,14 +43,26 @@
 
   <br>
  
-  <mat-form-field class="example-full-width">
-    <mat-label>Idcalificacion</mat-label>
-    <input matInput placeholder="Idcalificacion" [(ngModel)]="trainer.idCalificacion">
-  </mat-form-field>
-
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Calificacion</mat-label>
+    <mat-select [(value)]="idcalificacionselec" required>
+        <mat-option *ngFor="let c of listacalficacion" [value]="c.idcalificacion">
+            {{c.idcalificacion}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
   <br>
  
   
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Rutinas</mat-label>
+    <mat-select [(value)]="idrutinaselec" required>
+        <mat-option *ngFor="let r of listarutina" [value]="r.idrutinaselec">
+            {{r.idrutinaselec}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+  <br>
   
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/trainer">Cancelar</button>

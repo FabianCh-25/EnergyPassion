@@ -1,0 +1,34 @@
+<h2>Complete todo los campos porfavor</h2>
+<div class="container">
+<h1>Reservas</h1>
+<mat-form-field class="example-full-width">
+    <mat-label>idReserva</mat-label>
+    <input matInput placeholder="idReserva" [(ngModel)]="reserva.idReserva">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Fecha</mat-label>
+    <input matInput placeholder="Fecha" [(ngModel)]="reserva.Fecha">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Hora</mat-label>
+    <input matInput placeholder="Hora" [(ngModel)]="reserva.Hora">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Cliente</mat-label>
+    <input matInput placeholder="Cliente" [(ngModel)]="reserva.Cliente">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Trainer</mat-label>
+    <input matInput placeholder="Trainer" [(ngModel)]="reserva.Trainer">
+  </mat-form-field>
+
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/reserva">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

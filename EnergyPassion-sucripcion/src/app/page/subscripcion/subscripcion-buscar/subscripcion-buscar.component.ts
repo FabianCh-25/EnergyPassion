@@ -1,5 +1,5 @@
 import { SubscripcionService } from './../../../service/subscripcion.service';
-import { Subscripcion } from './../../../module/subscripcion';
+import { subscripcion } from './../../../module/subscripcion';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -15,10 +15,10 @@ export class SubscripcionBuscarComponent implements OnInit {
   ngOnInit(): void {
   }
   buscar(e: any){
-    let array: Subscripcion[] = [];
+    let array: subscripcion[] = [];
     this.SubscripcionService.listar().subscribe(data => {
       data.forEach((Element, index) => {
-        if(Element.Descripcion_plan.includes(e.target.value)){
+        if(Element.descripcion_plan.includes(e.target.value)){
           array.push(data[index]);
         }
       });

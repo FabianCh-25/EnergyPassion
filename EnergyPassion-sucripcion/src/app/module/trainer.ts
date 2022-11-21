@@ -1,12 +1,18 @@
+import { Calificacion } from "./calificacion";
+import { rutinas } from "./rutinas";
 export class Trainer{
 
-  id:number=0;
+  idtrainer:number=0;
   name:string = "";
-  age:number=0;
+  apellido:string = "";
+  edad:number=0;
+  horario:string= ""; //ver si sepuede cambiar a date
   nickname:string="";
   sexo:string="";
-  UsuarioPremium:boolean= false;
+  password:string="";
   email:string= "";
-  horario:number= 1;
-  idCalificacion:number= 70001
+  calificacion:Calificacion = new Calificacion();
+  rutinas:rutinas = new rutinas();
+
+
   }

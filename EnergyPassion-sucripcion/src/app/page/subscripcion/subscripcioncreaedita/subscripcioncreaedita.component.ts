@@ -1,6 +1,6 @@
 import { tiposuscripcion } from './../../../module/tiposuscripcion';
 import { SubscripcionService } from './../../../service/subscripcion.service';
-import { Subscripcion } from 'src/app/module/subscripcion';
+import { subscripcion } from 'src/app/module/subscripcion';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Params, Router } from '@angular/router';
 import { TiposuscripcionService } from 'src/app/service/tiposuscripcion.service';
@@ -13,12 +13,12 @@ import { TiposuscripcionService } from 'src/app/service/tiposuscripcion.service'
   styleUrls: ['./subscripcioncreaedita.component.css']
 })
 export class SubscripcioncreaeditaComponent implements OnInit {
-  Subscripcion: Subscripcion = new Subscripcion();
+  subscripcion: subscripcion = new subscripcion();
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
   listatiposuscripcion: tiposuscripcion[] = [];
-  idtiposuscripcion: number = 0;
+  idtiposuscripcionselec: number = 0;
   mensaje1: string = "";
   constructor(private SubscripcionService:SubscripcionService,private route:ActivatedRoute,
   private router: Router, private TiposuscripcionService: TiposuscripcionService) { }
@@ -32,20 +32,20 @@ export class SubscripcioncreaeditaComponent implements OnInit {
     this.TiposuscripcionService.listar().subscribe(data => { this.listatiposuscripcion = data });
   }
   aceptar(): void {
-    if (this.Subscripcion.idSuscripcion > 0 ) {
+    if (this.subscripcion.idsuscripcion > 0 ) {
       let p = new tiposuscripcion();
-      p.idTipoSuscripcion = this.idtiposuscripcion; //Aqui se toma como referencia el id de tipo de suscricpion
-      this.Subscripcion.Tiposuscripcion = p;
+      p.idtiposuscripcion = this.idtiposuscripcionselec; //Aqui se toma como referencia el id de tipo de suscricpion
+      this.subscripcion.tiposuscripcion = p;
       
       if  (this.edicion){
-      this.SubscripcionService.modificar(this.Subscripcion).subscribe(data => {
+      this.SubscripcionService.modificar(this.subscripcion).subscribe(data => {
         this.SubscripcionService.listar().subscribe(data => {
           this.SubscripcionService.setLista(data);
         });
       })
     }
     else {
-      this.SubscripcionService.insertar(this.Subscripcion).subscribe(data =>{
+      this.SubscripcionService.insertar(this.subscripcion).subscribe(data =>{
         this.SubscripcionService.listar().subscribe(data => {
           this.SubscripcionService.setLista(data);
         });
@@ -63,9 +63,9 @@ export class SubscripcioncreaeditaComponent implements OnInit {
   init(){
     if(this.edicion){
       this.SubscripcionService.Listarid(this.id).subscribe(data => {
-        this.Subscripcion = data
+        this.subscripcion = data
         console.log(data);
-        this.idtiposuscripcion = data.Tiposuscripcion.idTipoSuscripcion;
+        this.idtiposuscripcionselec = data.tiposuscripcion.idtiposuscripcion;
       })
     }
   }

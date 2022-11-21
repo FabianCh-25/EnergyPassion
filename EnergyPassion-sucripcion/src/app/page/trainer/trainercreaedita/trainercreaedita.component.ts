@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Params, Router } from '@angular/router';
 import { TrainerService } from './../../../service/trainer.service';
 import { Trainer } from 'src/app/module/trainer';
-
+import { Calificacion } from 'src/app/module/calificacion';
+import { CalificacionService } from 'src/app/service/calificacion.service';
+//AGREGAR COMPONENTES
 @Component({
   selector: 'app-trainercreaedita',
   templateUrl: './trainercreaedita.component.html',
@@ -13,7 +15,12 @@ export class TrainercreaeditaComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
-  constructor(private trainerService: TrainerService,private router: Router,private route:ActivatedRoute) { }
+  listacalficacion: Calificacion[] = [];
+  idcalificacionselec: number = 0;
+  listarutina: Rutina[] = [];
+  idrutinaselec: number = 0;
+  constructor(private trainerService: TrainerService,private route:ActivatedRoute,
+    private router: Router, private CalificacionService: CalificacionService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data:Params) => {
@@ -21,9 +28,16 @@ export class TrainercreaeditaComponent implements OnInit {
       this.edicion = data['id'] !=null;
       this.init();
     });
+    this.CalificacionService.listar().subscribe(data => { this.listacalficacion = data });
   }
   aceptar(): void {
-    if (this.trainer.id > 0 && this.trainer.name.length>0 && this.trainer.idCalificacion >0) {
+    if (this.trainer.idtrainer > 0 && this.trainer.name.length>0) {
+      let c = new Calificacion();
+      c.idcalificacion = this.idcalificacionselec;
+      this.trainer.calificacion = c;
+      let r = new Rutinas();
+      r.idrutinas = this.idrutinaselec;
+      this.trainer.calificacion = c;
       if  (this.edicion){
       this.trainerService.modificar(this.trainer).subscribe(data => {
         this.trainerService.listar().subscribe(data => {
@@ -48,6 +62,9 @@ export class TrainercreaeditaComponent implements OnInit {
     if(this.edicion){
       this.trainerService.Listarid(this.id).subscribe(data => {
         this.trainer = data;
+        console.log(data);
+        this.idcalificacionselec = data.calificacion.idcalificacion;
+        this.idrutinaselec = data.rutinas.idrutinas;
       })
     }
   }
