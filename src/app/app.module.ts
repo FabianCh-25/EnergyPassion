@@ -1,10 +1,8 @@
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-//import { PropietarioModule } from './model/propietario';
 import { PropietarioComponent } from './page/propietario/propietario.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PropietarioListarComponent } from './page/propietario/propietario-listar/propietario-listar.component';
@@ -33,8 +31,8 @@ import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-d
 import { TrainerCreaeditaComponent } from './page/trainer/trainer-creaedita/trainer-creaedita.component';
 import { TrainerBuscarComponent } from './page/trainer/trainer-buscar/trainer-buscar.component';
 import { TrainerDialogoComponent } from './page/trainer/trainer-listar/trainer-dialogo/trainer-dialogo.component';
+import { RutinasBuscarComponent } from './page/rutinas/rutinas-buscar/rutinas-buscar.component';
 
-import { LoginComponent } from './page/login/login.component';
 
 
 
@@ -58,11 +56,9 @@ import { LoginComponent } from './page/login/login.component';
     RutinasDialogoComponent,
     TrainerCreaeditaComponent,
     TrainerBuscarComponent,
-
     TrainerDialogoComponent,
-    LoginComponent
-
-    TrainerDialogoComponent
+    TrainerDialogoComponent,
+    RutinasBuscarComponent
 
 
   ],

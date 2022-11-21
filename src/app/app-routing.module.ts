@@ -1,5 +1,4 @@
 
-import { LoginComponent } from './page/login/login.component';
 import { TrainerCreaeditaComponent } from './page/trainer/trainer-creaedita/trainer-creaedita.component';
 import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
 import { HomeComponent } from './page/home/home.component';
@@ -11,6 +10,8 @@ import { ClienteComponent } from './page/cliente/cliente.component';
 import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
 import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
 import { RutinasComponent } from './page/rutinas/rutinas.component';
+
+
 const routes: Routes = [
   //{path: 'menu', component: HomeComponent},
   {path: 'menu', component: HomeComponent,children:[]},
@@ -34,13 +35,7 @@ const routes: Routes = [
 
     ]},
 
-    {
-
-    path: 'login', component: LoginComponent
-    }
-
-    ]}
-
+    
 ];
 
 @NgModule({
