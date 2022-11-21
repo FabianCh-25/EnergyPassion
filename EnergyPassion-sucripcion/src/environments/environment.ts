@@ -9,6 +9,7 @@ export const environment = {
   host_clientes: "http://localhost:8083/clientes",
   host_subscripcion: "http://localhost:8083/suscripcion",
   host_tiposuscripcion: "http://localhost:8083/tiposuscripcion",
+  host_calificaciones: "http://localhost:8083/calificaciones",
 };
 
 /*
