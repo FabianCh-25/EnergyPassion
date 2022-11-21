@@ -1,3 +1,4 @@
+
 //import { PropietarioModule } from './model/propietario';
 import { PropietarioComponent } from './page/propietario/propietario.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -38,8 +39,16 @@ import { TiposuscripcionBuscarComponent } from './page/tiposuscripcion/tiposuscr
 import { TiposuscripcionListarComponent } from './page/tiposuscripcion/tiposuscripcion-listar/tiposuscripcion-listar.component';
 import { TiposuscripcioncreaeditaComponent } from './page/tiposuscripcion/tiposuscripcioncreaedita/tiposuscripcioncreaedita.component';
 import { TiposuscripcionDialogoComponent } from './page/tiposuscripcion/tiposuscripcion-listar/tiposuscripcion-dialogo/tiposuscripcion-dialogo.component';
-
-
+import { CalificacionDialogoComponent } from './page/calificacion/calificacionlistar/calificacion-dialogo/calificacion-dialogo.component';
+import { CalificacioncreaditaComponent } from './page/calificacion/calificacioncreadita/calificacioncreadita.component';
+import { CalificacionBuscarComponent } from './page/calificacion/calificacion-buscar/calificacion-buscar.component';
+import { CalificacionlistarComponent } from './page/calificacion/calificacionlistar/calificacionlistar.component';
+import { CalificacionComponent } from './page/calificacion/calificacion.component';
+import { ReservacreaditaComponent } from './page/reserva/reservacreadita/reservacreadita.component';
+import { ReservadeleteComponent } from './page/reserva/reservalistar/reservadelete/reservadelete.component';
+import { ReservabuscarComponent } from './page/reserva/reservabuscar/reservabuscar.component';
+import { ReservalistarComponent } from './page/reserva/reservalistar/reservalistar.component';
+import { ReservaComponent } from './page/reserva/reserva.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +70,17 @@ import { TiposuscripcionDialogoComponent } from './page/tiposuscripcion/tiposusc
     TiposuscripcionBuscarComponent,
     TiposuscripcionListarComponent,
     TiposuscripcioncreaeditaComponent,
-    TiposuscripcionDialogoComponent
+    TiposuscripcionDialogoComponent,
+    CalificacionComponent,
+    CalificacionBuscarComponent,
+    CalificacionlistarComponent,
+    CalificacionDialogoComponent,
+    CalificacioncreaditaComponent,
+    ReservaComponent,
+    ReservabuscarComponent,
+    ReservalistarComponent,
+    ReservadeleteComponent,
+    ReservacreaditaComponent,
   ],
   imports: [
     BrowserModule,

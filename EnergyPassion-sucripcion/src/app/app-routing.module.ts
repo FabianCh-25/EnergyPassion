@@ -8,9 +8,15 @@ import { TrainercreaeditaComponent } from './page/trainer/trainercreaedita/train
 import { SubscripcionComponent } from './page/subscripcion/subscripcion.component';
 import { SubscripcioncreaeditaComponent } from './page/subscripcion/subscripcioncreaedita/subscripcioncreaedita.component';
 import { TiposuscripcioncreaeditaComponent } from './page/tiposuscripcion/tiposuscripcioncreaedita/tiposuscripcioncreaedita.component';
+import { CalificacionComponent } from './page/calificacion/calificacion.component';
+import { CalificacioncreaditaComponent } from './page/calificacion/calificacioncreadita/calificacioncreadita.component';
+import { ReservaComponent } from './page/reserva/reserva.component';
+import { ReservacreaditaComponent } from './page/reserva/reservacreadita/reservacreadita.component';
 
 const routes: Routes = [{
   path: 'propietarios', component: PropietarioComponent,children:[]},
+
+
   {
   path: 'trainer',component: TrainerComponent, children:[{ path: 'nuevo', component: TrainercreaeditaComponent},
   {path: 'edicion/:id', component: TrainercreaeditaComponent  }
@@ -28,6 +34,15 @@ const routes: Routes = [{
   [{ path: 'nuevo', component: TiposuscripcioncreaeditaComponent},
   {path: 'edicion/:id', component: TiposuscripcioncreaeditaComponent} ]},
 
+  {path: 'calificacion',component: CalificacionComponent, children:
+  [{ path: 'nuevo', component: CalificacioncreaditaComponent},
+  {path: 'edicion/:id', component: CalificacioncreaditaComponent} ]},
+  
+  {path: 'reserva',component: ReservaComponent, children:
+  [{ path: 'nuevo', component: ReservacreaditaComponent},
+  {path: 'edicion/:id', component: ReservacreaditaComponent} ]},
+
+  
 ]
 ;
 

@@ -8,7 +8,7 @@ import { EmptyExpr } from '@angular/compiler';
   providedIn: 'root'
 })
 export class TrainerService {
- url: string = "http://localhost:5000/trainers"
+   private url: string = "http://localhost:8083/trainer"
   private listaCambio = new Subject<Trainer[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -28,10 +28,10 @@ export class TrainerService {
     return this.listaCambio.asObservable();
   }
   modificar(trainer:Trainer) {
-    return this.http.put(this.url + "/" + trainer.id, trainer);
+    return this.http.put(this.url + "/" + trainer.idtrainer, trainer);
   }
   Listarid(id:number) {
-    return this.http.get<Trainer>( `${this.url}/${id}`);
+    return this.http.get<Trainer>(`${this.url}/${id}`);
   }
   eliminar(id:number){
     return this.http.delete(this.url + "/" + id);

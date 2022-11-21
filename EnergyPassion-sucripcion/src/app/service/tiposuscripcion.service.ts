@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { tiposuscripcion } from './../module/tiposuscripcion';
-
+import { tiposuscripcion } from '../module/tiposuscripcion';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Subject, EMPTY } from 'rxjs';
@@ -30,10 +29,10 @@ export class TiposuscripcionService {
     return this.listaCambio.asObservable();
   }
   modificar(tiposuscripcion:tiposuscripcion) {
-    return this.http.put(this.url + "/" + tiposuscripcion.idTipoSuscripcion, tiposuscripcion);
+    return this.http.put(this.url + "/" + tiposuscripcion.idtiposuscripcion, tiposuscripcion);
   }
   Listarid(id:number) {
-    return this.http.get<tiposuscripcion>( `${this.url}/${id}`);
+    return this.http.get<tiposuscripcion>(`${this.url}/${id}`);
   }
   eliminar(id:number){
     return this.http.delete(`${this.url}/${id}`);
@@ -45,6 +44,7 @@ export class TiposuscripcionService {
     this.confirmaEliminacion.next(estado);
   }
   buscar(texto: string){
+    console.log("algo")
     if(texto.length != 0){
       return this.http.post<tiposuscripcion[]>(`${this.url}/buscar`, texto.toLowerCase(),{  
       });
