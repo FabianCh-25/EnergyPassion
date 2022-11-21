@@ -24,6 +24,9 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { ClienteComponent } from './page/cliente/cliente.component';
 import { ClienteListarComponent } from './page/cliente/cliente-listar/cliente-listar.component';
+import { ClienteCreaeditaComponent } from './page/cliente/cliente-creaedita/cliente-creaedita.component';
+import { ClienteBuscarComponent } from './page/cliente/cliente-buscar/cliente-buscar.component';
+import { ClienteDialogoComponent } from './page/cliente/cliente-listar/cliente-dialogo/cliente-dialogo.component';
 import { TrainercreaeditaComponent } from './page/trainer/trainercreaedita/trainercreaedita.component';
 import { TrainerDialogoComponent } from './page/trainer/trainer-listar/trainer-dialogo/trainer-dialogo.component';
 import { TrainerComponent } from './page/trainer/trainer.component';
@@ -49,6 +52,13 @@ import { ReservadeleteComponent } from './page/reserva/reservalistar/reservadele
 import { ReservabuscarComponent } from './page/reserva/reservabuscar/reservabuscar.component';
 import { ReservalistarComponent } from './page/reserva/reservalistar/reservalistar.component';
 import { ReservaComponent } from './page/reserva/reserva.component';
+import { RutinasComponent } from './page/rutinas/rutinas.component';
+import { RutinasListarComponent } from './page/rutinas/rutinas-listar/rutinas-listar.component';
+import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
+import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-dialogo/rutinas-dialogo.component';
+import { RutinasBuscarComponent } from './page/rutinas/rutinas-buscar/rutinas-buscar.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +69,9 @@ import { ReservaComponent } from './page/reserva/reserva.component';
     TrainerListarComponent,
     ClienteComponent,
     ClienteListarComponent,
+    ClienteCreaeditaComponent,
+    ClienteDialogoComponent,
+    ClienteBuscarComponent,
     TrainerDialogoComponent,
     TrainerBuscarComponent,
     SubscripcionComponent,
@@ -81,6 +94,11 @@ import { ReservaComponent } from './page/reserva/reserva.component';
     ReservalistarComponent,
     ReservadeleteComponent,
     ReservacreaditaComponent,
+    RutinasComponent,
+    RutinasListarComponent,
+    RutinasCreaeditaComponent,
+    RutinasDialogoComponent,
+    RutinasBuscarComponent
   ],
   imports: [
     BrowserModule,
