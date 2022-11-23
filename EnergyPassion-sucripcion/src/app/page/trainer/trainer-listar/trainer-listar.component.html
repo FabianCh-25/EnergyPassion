@@ -4,7 +4,7 @@
 
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element?.idTrainer}} </td>
+    <td mat-cell *matCellDef="let element"> {{element?.idtrainer}} </td>
 
   </ng-container>
 
@@ -15,7 +15,7 @@
   </ng-container>
 
   <ng-container matColumnDef="apellido">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <th mat-header-cell *matHeaderCellDef> Apellido </th>
     <td mat-cell *matCellDef="let element"> {{element?.apellido}} </td>
   </ng-container>
 
@@ -51,12 +51,12 @@
 
   <ng-container matColumnDef="idcalificacion">
     <th mat-header-cell *matHeaderCellDef> idCalificacion </th>
-    <td mat-cell *matCellDef="let element"> {{element?.idcalificacion}} </td>
+    <td mat-cell *matCellDef="let element"> {{element?.calificaciones.idcalificacion}} </td>
   </ng-container>
 
   <ng-container matColumnDef="rutinas">
     <th mat-header-cell *matHeaderCellDef> Rutinas </th>
-    <td mat-cell *matCellDef="let element"> {{element?.idRutinas}} </td>
+    <td mat-cell *matCellDef="let element"> {{element?.rutinas.idrutinas}} </td>
   </ng-container>
 
   <ng-container matColumnDef="symbol">
@@ -70,14 +70,14 @@
   <ng-container matColumnDef="acciones">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="primary" [routerLink]="['edicion', element?.idTrainer]"> Actualizar</button>
+      <button mat-raised-button color="primary" [routerLink]="['edicion', element?.idtrainer]"> Actualizar</button>
     </td> 
   </ng-container>
   
   <ng-container matColumnDef="accion2">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="warn" (click)="confirmar(element.idTrainer)"> Eliminar</button>
+      <button mat-raised-button color="warn" (click)="confirmar(element.idtrainer)"> Eliminar</button>
     </td> 
   </ng-container>
 

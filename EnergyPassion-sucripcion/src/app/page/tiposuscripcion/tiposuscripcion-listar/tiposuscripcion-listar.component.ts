@@ -21,9 +21,10 @@ export class TiposuscripcionListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.ps.listar().subscribe(data => {
+      this.lista = data;
       this.dataSource = new MatTableDataSource(data);
 
-    })
+    });
     this.ps.getLista().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });

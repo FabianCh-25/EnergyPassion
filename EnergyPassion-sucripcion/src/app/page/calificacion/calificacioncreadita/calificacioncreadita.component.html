@@ -10,10 +10,10 @@
     <mat-label>Calificado</mat-label>
     <input matInput placeholder="Calificado" [(ngModel)]="calificacion.calificado">
   </mat-form-field>
-  
+  <br>
   <mat-form-field appearance="fill">
     <mat-label>Seleccione Cliente</mat-label>
-    <mat-select [(value)]="listcliente" required>
+    <mat-select [(value)]="idclienteselec" required>
         <mat-option *ngFor="let c of listcliente" [value]="c.idcliente">
             {{c.idcliente}}
         </mat-option>

@@ -39,14 +39,14 @@ export class TrainercreaeditaComponent implements OnInit {
       c.idcalificacion = this.idcalificacionselec;
       let r = new rutinas();
       r.idrutinas = this.idrutinaselec;
-      this.trainer.calificacion = c;
+      this.trainer.calificaciones = c;
       this.trainer.rutinas = r;
       if  (this.edicion){
       this.trainerService.modificar(this.trainer).subscribe(data => {
         this.trainerService.listar().subscribe(data => {
           this.trainerService.setLista(data);
-        })
-      })
+        });
+      });
     }
     else {
       this.trainerService.insertar(this.trainer).subscribe(data =>{
@@ -69,7 +69,7 @@ export class TrainercreaeditaComponent implements OnInit {
       this.trainerService.Listarid(this.id).subscribe(data => {
         this.trainer = data;
         console.log(data);
-        this.idcalificacionselec = data.calificacion.idcalificacion;
+        this.idcalificacionselec = data.calificaciones.idcalificacion;
         this.idrutinaselec = data.rutinas.idrutinas;
       })
     }
