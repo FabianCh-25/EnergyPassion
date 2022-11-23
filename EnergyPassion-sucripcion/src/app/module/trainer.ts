@@ -11,7 +11,7 @@ export class Trainer{
   sexo:string="";
   password:string="";
   email:string= "";
-  calificacion:Calificacion = new Calificacion();
+  calificaciones:Calificacion = new Calificacion();
   rutinas:rutinas = new rutinas();
 
 

@@ -29,7 +29,8 @@ export class TiposuscripcionService {
     return this.listaCambio.asObservable();
   }
   modificar(tiposuscripcion:tiposuscripcion) {
-    return this.http.put(this.url + "/" + tiposuscripcion.idtiposuscripcion, tiposuscripcion);
+    return this.http.put(this.url, tiposuscripcion);
+    //return this.http.put(this.url + "/" + tiposuscripcion.idtiposuscripcion, tiposuscripcion);
   }
   Listarid(id:number) {
     return this.http.get<tiposuscripcion>(`${this.url}/${id}`);

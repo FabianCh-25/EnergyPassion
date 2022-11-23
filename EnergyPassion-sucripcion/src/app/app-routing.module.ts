@@ -16,8 +16,9 @@ import { ReservacreaditaComponent } from './page/reserva/reservacreadita/reserva
 import { RutinasComponent } from './page/rutinas/rutinas.component';
 import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
 
-const routes: Routes = [{
-  path: 'propietarios', component: PropietarioComponent,children:[]},
+const routes: Routes = [
+ 
+
 
   {path: 'menu',component: RutinasComponent, children:[]},
 
