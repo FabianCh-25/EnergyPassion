@@ -3,7 +3,7 @@ import { rutinas } from "./rutinas";
 export class Trainer{
 
   idtrainer:number=0;
-  name:string = "";
+  nombre:string = "";
   apellido:string = "";
   edad:number=0;
   horario:string= ""; //ver si sepuede cambiar a date

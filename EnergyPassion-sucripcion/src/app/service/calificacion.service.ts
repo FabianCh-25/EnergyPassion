@@ -9,7 +9,7 @@ import { SafeResourceUrl } from '@angular/platform-browser';
   providedIn: 'root'
 })
 export class CalificacionService {
-private url:string=`http://localhost:5000/calificaciones`;
+private url:string=`http://localhost:8083/calificacion`;
 
 private listaCambio = new Subject<Calificacion[]>()
 private confirmaEliminacion = new Subject<Boolean>()

@@ -18,5 +18,5 @@ export class Cliente{
   objetivofisico:string= "";
 
   rutinas:rutinas =new rutinas();
-  subscripcion:subscripcion =new subscripcion();
+  suscripcion:subscripcion =new subscripcion();
   }
