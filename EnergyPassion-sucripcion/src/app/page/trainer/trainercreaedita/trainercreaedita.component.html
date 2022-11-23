@@ -1,0 +1,71 @@
+<p>trainer-creaedita works!</p>
+<div class="container">
+
+  <h1>Trainer</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="idtrainer" [(ngModel)]="trainer.idtrainer">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="nombre" [(ngModel)]="trainer.nombre">
+
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Edad</mat-label>
+    <input type="edad" matInput required placeholder="edad" [(ngModel)]="trainer.edad">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>nickname</mat-label>
+    <input type="nickname" matInput required placeholder="nickname" [(ngModel)]="trainer.nickname">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>sexo</mat-label>
+    <input matInput placeholder="sexo" [(ngModel)]="trainer.sexo">
+  </mat-form-field>
+
+  
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Horario</mat-label>
+    <input matInput placeholder="horario" [(ngModel)]="trainer.horario">
+  </mat-form-field>
+
+  <br>
+ 
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Calificacion</mat-label>
+    <mat-select [(value)]="idcalificacionselec" required>
+        <mat-option *ngFor="let c of listacalficacion" [value]="c.idcalificacion">
+            {{c.idcalificacion}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+  <br>
+ 
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Rutinas</mat-label>
+    <mat-select [(value)]="idrutinaselec" required>
+        <mat-option *ngFor="let r of listarutina" [value]="r.idrutinas">
+            {{r.idrutinas}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+  <br>
+  
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/trainer">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

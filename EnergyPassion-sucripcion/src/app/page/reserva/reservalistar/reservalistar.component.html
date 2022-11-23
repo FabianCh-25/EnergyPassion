@@ -1,0 +1,57 @@
+
+<h1>Lista de Reservas de Trainers EnergyPassion</h1>
+<app-reservabuscar></app-reservabuscar>
+
+<table mat-table [dataSource]= "dataSource" class= "mat-elevation-z8">
+   
+    <ng-container matColumnDef="idreserva">
+        <th mat-header-cell *matHeaderCellDef> idReserva </th>
+        <td mat-cell *matCellDef="let element"> {{element?.idreserva}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let element"> {{element?.fecha}} </td>
+    </ng-container>
+    <ng-container matColumnDef="hora">
+        <th mat-header-cell *matHeaderCellDef> Hora </th>
+        <td mat-cell *matCellDef="let element"> {{element?.hora}} </td>
+    </ng-container>
+    <ng-container matColumnDef="mensaje">
+      <th mat-header-cell *matHeaderCellDef> mensaje </th>
+      <td mat-cell *matCellDef="let element"> {{element?.mensaje}} </td>
+  </ng-container>
+    <ng-container matColumnDef="cliente">
+        <th mat-header-cell *matHeaderCellDef> Cliente </th>
+        <td mat-cell *matCellDef="let element"> {{element?.cliente}} </td>
+    </ng-container>
+    <ng-container matColumnDef="trainer">
+        <th mat-header-cell *matHeaderCellDef> Trainer </th>
+        <td mat-cell *matCellDef="let element"> {{element?.trainer}} </td>
+    </ng-container>
+    <ng-container matColumnDef="rutinas">
+      <th mat-header-cell *matHeaderCellDef> Rutinas </th>
+      <td mat-cell *matCellDef="let element"> {{element?.rutinas}} </td>
+  </ng-container>
+    <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+            [routerLink]="['edicion', element?.id]">Actualizar</button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="acciones2">
+        <th mat-header-cell *matHeaderCellDef> Acciones2 </th>
+        <td mat-cell *matCellDef="let element"> <button mat-raised-button color="warn"
+          (click)="confirmar(element.id)">Eliminar</button>
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="DisplayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: DisplayedColumns;"></tr>
+</table>
+<div class="example-button-container">
+
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/reserva/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>        

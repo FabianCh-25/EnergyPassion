@@ -1,0 +1,26 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Energy PAssion (PE)</span>
+      <mat-icon class="example-icon" aria-hidden="false" >fitness_center</mat-icon>
+    </mat-toolbar-row>
+  
+  
+  
+    <mat-toolbar-row>
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      
+  | <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="navegar('clientes')" >Clientes</button>
+    <button mat-menu-item (click)="navegar('trainer')">Trainers</button>
+    <button mat-menu-item (click)="navegar('rutinas')">Rutinas</button>
+    <button mat-menu-item (click)="navegar('reserva')">Reservas</button>
+    <button mat-menu-item (click)="navegar('calificacion')">Calificacion</button>
+    <button mat-menu-item (click)="navegar('suscripcion')">Suscripcion</button>
+    <button mat-menu-item (click)="navegar('tiposuscripcion')">Tiposuscripcion</button>
+    
+  
+  </mat-menu>
+    </mat-toolbar-row>
+  
+  </mat-toolbar>

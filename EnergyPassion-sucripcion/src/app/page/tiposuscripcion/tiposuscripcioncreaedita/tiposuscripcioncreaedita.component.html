@@ -1,0 +1,25 @@
+
+<div class="container">
+
+  <h1>Tipo Suscripcion</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="idtiposuscripcion" [(ngModel)]="tiposuscripcion.idtiposuscripcion">
+  </mat-form-field>
+
+  <br>
+
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Descripcion_tipo</mat-label>
+    <input matInput placeholder="descripcion_tipo" [(ngModel)]="tiposuscripcion.descripcion_tipo">
+  </mat-form-field>
+  
+  <br>
+  
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/tiposuscripcion">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

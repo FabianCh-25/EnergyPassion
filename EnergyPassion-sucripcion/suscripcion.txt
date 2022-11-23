@@ -1,0 +1,45 @@
+module.exports = function () {
+  var data = {
+    propietarios: [
+      {
+        id:3344,
+       precio_plan: 20,
+	descripcion_plan:"premium",
+
+      },
+      {
+        id:13563,
+       precio_plan: 20,
+	descripcion_plan:"premium",
+	
+	},
+      {
+       id:15687,
+       precio_plan: 20,
+	descripcion_plan:"premium",
+	
+	},
+	{
+	id:16776,
+       precio_plan: 20,
+	descripcion_plan:"premium",
+	
+ 	 },
+	{
+	id:15786,
+     precio_plan: 20,
+	descripcion_plan:"premium",
+	
+	},
+       {
+	id:12990,
+       precio_plan: 20,
+	descripcion_plan:"premium",
+	
+	},
+    ]
+  
+  }
+
+  return data
+}

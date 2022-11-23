@@ -1,0 +1,55 @@
+<h1>Lista de rutinas de EnergyPassion!</h1>
+<app-cliente-buscar></app-cliente-buscar>
+<table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let element"> {{element?.idrutinas}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Tren_superior">
+      <th mat-header-cell *matHeaderCellDef> Tren_superior </th>
+      <td mat-cell *matCellDef="let element"> {{element?.tren_superior}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Tren_inferior">
+      <th mat-header-cell *matHeaderCellDef> Tren_inferior </th>
+      <td mat-cell *matCellDef="let element"> {{element?.tren_inferior}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Tiempo">
+      <th mat-header-cell *matHeaderCellDef> Tiempo </th>
+      <td mat-cell *matCellDef="let element"> {{element?.tiempo}} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> acciones </th>
+      <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+          [routerLink]="['edicion', element?.idrutinas]">Actualizar</button>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="acciones2">
+      <th mat-header-cell *matHeaderCellDef> acciones2 </th>
+      <td mat-cell *matCellDef="let element">
+          <button mat-raised-button color="warn" (click)="confirmar(element.idrutinas)">Eliminar</button>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+  </table>
+  <div class="example-button-container">
+
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+      routerLink="/rutinas/nuevo">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>

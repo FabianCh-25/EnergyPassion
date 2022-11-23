@@ -1,0 +1,78 @@
+module.exports = function () {
+  var data = {
+    propietarios: [
+      {
+        id:34234,
+       name: "Richard Alvarez",
+       edad: "22"  
+        nickname: "R_Alvarez",
+        email: "richardalva@gmail.com"
+	          
+        UsuarioPremium: true,
+        sexo: "masculino",
+        horario: 2,
+        idCalificacion: 55225
+      },
+      {
+        id:23443,
+       name: "Stewart Tapia",
+       edad:"24"	
+        nickname: "Fitness Tapia",
+        email: "stewarttapia@gmail.com",
+	            
+        UsuarioPremium: false,
+        sexo: "masculino"
+        horario:3,
+        idCalificacion: 45252
+},
+      {
+        id:10034,
+        name: "Alvaro",
+        edad:"21" 
+        nickname: "Alvagod",
+        email: "alvaro@gmail.com",
+	       	  
+        UsuarioPremium: false,
+        sexo: "masculino",
+        horario: 3,
+        idCalificacion: 82572
+},
+{
+	id:12525,
+    name: "Maria Melgar",
+    age: 32,
+    nickname: "Mar�a Fitness",
+    sexo: "femenino",
+    UsuarioPremium: false, 
+    email: "maria@gmail.com",
+    horario: 1,
+    idCalificacion: 65666
+	},
+  {
+	id:12525,
+    name: "Anakin Skywalker",
+    age: 22,
+    nickname: "Anakin Trainer",
+    sexo: "masculino",
+    UsuarioPremium: false, 
+    email: "anakin@gmail.com",
+    horario: 3,
+    idCalificacion: 34434
+	},
+       {
+	id:3425,
+    name: "Rodrigo ANGUA",
+    age: 23,
+    nickname: "Perforador",
+    sexo: "masculino",
+    UsuarioPremium: false, 
+    email: "anakin@gmail.com",
+    horario: 3,
+    idCalificacion: 3443455
+	},
+    ]
+  
+  }
+
+  return data
+}

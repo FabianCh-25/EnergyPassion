@@ -1,0 +1,56 @@
+<h2>Complete todo los campos porfavor</h2>
+<div class="container">
+<h1>Reservas</h1>
+<mat-form-field class="example-full-width">
+    <mat-label>idReserva</mat-label>
+    <input matInput placeholder="idReserva" [(ngModel)]="reserva.idreserva">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Fecha</mat-label>
+    <input matInput placeholder="Fecha" [(ngModel)]="reserva.fecha">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Hora</mat-label>
+    <input matInput placeholder="Hora" [(ngModel)]="reserva.hora">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Mensaje</mat-label>
+    <input matInput placeholder="Mensaje" [(ngModel)]="reserva.mensaje">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Clientes</mat-label>
+    <mat-select [(value)]="idclienteselec" required>
+        <mat-option *ngFor="let c of listacliente" [value]="c.idcliente">
+          {{c.idcliente}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione Trainer</mat-label>
+  <mat-select [(value)]="idrutinaselec" required>
+      <mat-option *ngFor="let t of listatrainer" [value]="t.idtrainer">
+        {{t.idtrainer}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Seleccione rutinas</mat-label>
+  <mat-select [(value)]="idrutinaselec" required>
+      <mat-option *ngFor="let r of listarutina" [value]="r.idrutinas">
+        {{r.idrutinas}}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/reserva">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

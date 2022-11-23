@@ -1,0 +1,47 @@
+<h1>Lista de Calificacion de Trainers EnergyPassion</h1>
+<app-calificacion-buscar></app-calificacion-buscar>
+
+<table mat-table [dataSource]= "dataSource" class= "mat-elevation-z8">
+    
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element?.idcalificacion}} </td>
+    </ng-container>
+    <ng-container matColumnDef="calificado">
+        <th mat-header-cell *matHeaderCellDef> Calificado </th> 
+        <td mat-cell *matCellDef="let element"> {{element?.calificado}} </td>
+    </ng-container>
+        <ng-container matColumnDef="cliente">
+            <th mat-header-cell *matHeaderCellDef> Cliente  </th>
+            <td mat-cell *matCellDef="let element"> {{element.cliente.idcliente}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+                [routerLink]="['edicion', element?.idcalificacion]">Actualizar</button>
+               
+            </td>
+          </ng-container>
+
+     
+          <ng-container matColumnDef="acciones2">
+            <th mat-header-cell *matHeaderCellDef> Acciones2 </th>
+            <td mat-cell *matCellDef="let element"> <button mat-raised-button color="warn"
+              (click)="confirmar(element.idcalificacion)">Eliminar</button>
+              
+            </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="DisplayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: DisplayedColumns;"></tr>
+            
+</table>
+
+<div class="example-button-container">
+
+  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    routerLink="/calificacion/nuevo">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>        

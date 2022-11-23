@@ -1,0 +1,57 @@
+module.exports = function () {
+  var data = {
+    propietarios: [
+      {
+        id:12124,
+       name_trainer: "Renzo Alfredo",
+       tren_superior:"2",
+	tren_inferior:"3",
+	Repeticiones:"5",
+	tiempo:3,
+      },
+      {
+        id:12123,
+       name_trainer: "MIguel Alonso",
+       tren_superior:"5",
+	tren_inferior:"4",
+	Repeticiones:"6",
+	tiempo:7,
+	},
+      {
+       id:12187,
+       name_trainer: "Fernando Rios",
+       tren_superior:"6",
+	tren_inferior:"20",
+	Repeticiones:"6",
+	tiempo:80,
+	},
+	{
+	id:12456,
+       name_trainer: "Almudena Sanchez",
+       tren_superior:"3",
+	tren_inferior:"7",
+	Repeticiones:"45",
+	tiempo:30,
+ 	 },
+	{
+	id:12166,
+       name_trainer: "Raul Hernandez",
+       tren_superior:"2",
+	tren_inferior:"3",
+	Repeticiones:"22",
+	tiempo:"8",
+	},
+       {
+	id:12154,
+       name_trainer: "Gauss Arturo",
+       tren_superior:"3",
+	tren_inferior:"5",
+	Repeticiones:"10",
+	tiempo:"8",
+	},
+    ]
+  
+  }
+
+  return data
+}

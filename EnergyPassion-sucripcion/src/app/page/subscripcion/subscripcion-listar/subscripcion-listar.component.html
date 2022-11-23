@@ -1,0 +1,62 @@
+<div class="container">
+<h1>Lista de Suscripcion de EnergyPAssion</h1>
+<app-subscripcion-buscar></app-subscripcion-buscar>
+<table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="idsuscripcion">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element?.idsuscripcion}} </td>
+
+  </ng-container>
+
+  <ng-container matColumnDef="precio_plan">
+    <th mat-header-cell *matHeaderCellDef> precio_plan </th>
+    <td mat-cell *matCellDef="let element"> {{element?.precio_plan}}</td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="descripcion_plan">
+    <th mat-header-cell *matHeaderCellDef> descripcion_plan </th>
+    <td mat-cell *matCellDef="let element"> {{element.descripcion_plan}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tiposuscripcion">
+    <th mat-header-cell *matHeaderCellDef> Tipo Suscripcion</th>
+    <td mat-cell *matCellDef="let element"> {{element.tiposuscripcion.idtiposuscripcion}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="symbol">
+
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+
+  </ng-container>
+
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-raised-button color="primary" [routerLink]="['edicion', element?.idsuscripcion]"> Actualizar</button>
+    </td> 
+  </ng-container>
+  
+  <ng-container matColumnDef="accion2">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-raised-button color="warn" (click)="confirmar(element.idsuscripcion)"> Eliminar</button>
+    </td> 
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div class="example-button-container">
+
+  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
+    routerLink="/suscripcion/nuevo">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</div>
+</div>
