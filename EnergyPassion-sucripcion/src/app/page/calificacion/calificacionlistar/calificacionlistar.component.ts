@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class CalificacionlistarComponent implements OnInit {
   lista:Calificacion[]=[];
   dataSource:MatTableDataSource<Calificacion>=new MatTableDataSource();
-  DisplayedColumns:string[]=['id', 'calificado' , 'Trainer','acciones','acciones2']
+  DisplayedColumns:string[]=['id', 'calificado', 'cliente','acciones','acciones2']
   private idMayor: number = 0;
   constructor(private pService:CalificacionService,private dialog: MatDialog) { }
 

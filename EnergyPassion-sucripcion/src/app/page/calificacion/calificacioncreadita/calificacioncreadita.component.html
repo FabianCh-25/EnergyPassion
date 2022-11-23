@@ -10,11 +10,15 @@
     <mat-label>Calificado</mat-label>
     <input matInput placeholder="Calificado" [(ngModel)]="calificacion.calificado">
   </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Trainer</mat-label>
-    <input matInput placeholder="Trainer" [(ngModel)]="calificacion.cliente">
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione Cliente</mat-label>
+    <mat-select [(value)]="listcliente" required>
+        <mat-option *ngFor="let c of listcliente" [value]="c.idcliente">
+            {{c.idcliente}}
+        </mat-option>
+    </mat-select>
   </mat-form-field>
-
 
 <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="warn" routerLink="/calificacion">Cancelar</button>

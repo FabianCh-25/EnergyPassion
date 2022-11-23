@@ -5,7 +5,7 @@
 
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element?.icliente}} </td>
+    <td mat-cell *matCellDef="let element"> {{element?.idcliente}} </td>
 
   </ng-container>
 
@@ -75,19 +75,20 @@
 </ng-container>
   <ng-container matColumnDef="subscripcion">
     <th mat-header-cell *matHeaderCellDef> Subscripcion </th>
-    <td mat-cell *matCellDef="let element"> {{element.subscripcion.idsuscripcion}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.suscripcion.idsuscripcion}} </td>
 </ng-container>
   <ng-container matColumnDef="acciones">
     <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
         [routerLink]="['edicion', element?.idcliente]">Actualizar</button>
+       
     </td>
   </ng-container>
 
   <ng-container matColumnDef="acciones2">
     <th mat-header-cell *matHeaderCellDef> Acciones2 </th>
     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="warn"
-      (click)="confirmar(element.id)">Eliminar</button>
+      (click)="confirmar(element.idcliente)">Eliminar</button>
     </td>
   </ng-container>
 

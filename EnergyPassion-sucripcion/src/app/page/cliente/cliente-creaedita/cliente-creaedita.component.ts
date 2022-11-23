@@ -26,7 +26,8 @@ export class ClienteCreaeditaComponent implements OnInit {
 
 
   constructor(private clienteService:ClienteService ,
-    private router: Router, private route: ActivatedRoute,private RutinasService: RutinasService,private SubscripcionService: SubscripcionService) { }
+    private router: Router, private route: ActivatedRoute,private RutinasService: RutinasService,
+    private SubscripcionService: SubscripcionService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
@@ -34,6 +35,8 @@ export class ClienteCreaeditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
     });
+    this.RutinasService.listar().subscribe(data => { this.listarutinas = data });
+    this.SubscripcionService.listar().subscribe(data => { this.listasuscripcion = data });
   }
   aceptar():void{
 
@@ -43,6 +46,8 @@ export class ClienteCreaeditaComponent implements OnInit {
       let s = new subscripcion();
       s.idsuscripcion = this.idsuscripcionselec;
 
+      this.cliente.rutinas=r;
+      this.cliente.suscripcion=s;
 
       if (this.edicion) {
         this.clienteService.modificar(this.cliente).subscribe(data => {
@@ -55,7 +60,10 @@ export class ClienteCreaeditaComponent implements OnInit {
       this.clienteService.insertar(this.cliente).subscribe(data => {
         this.clienteService.listar().subscribe(data => {
           this.clienteService.setLista(data);
-        })
+        });
+        },err => {
+          //this.mensaje=err
+          console.log(err);
       })
     }
       this.router.navigate(['clientes']);
@@ -72,7 +80,7 @@ export class ClienteCreaeditaComponent implements OnInit {
         console.log(data);
         this.idrutinasselec = data.rutinas.idrutinas;
         //console.log(data);
-        this.idsuscripcionselec = data.subscripcion.idsuscripcion;
+        this.idsuscripcionselec = data.suscripcion.idsuscripcion;
       })
     }
 
