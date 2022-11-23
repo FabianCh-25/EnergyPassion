@@ -18,7 +18,7 @@ export class TrainerBuscarComponent implements OnInit {
     let array: Trainer[] = [];
     this.TrainerService.listar().subscribe(data => {
       data.forEach((Element, index) => {
-        if(Element.name.includes(e.target.value)){
+        if(Element.nombre.includes(e.target.value)){
           array.push(data[index]);
         }
       });

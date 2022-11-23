@@ -34,13 +34,13 @@ export class TrainercreaeditaComponent implements OnInit {
     this.RutinasService.listar().subscribe(data => { this.listarutina = data });
   }
   aceptar(): void {
-    if (this.trainer.idtrainer > 0 && this.trainer.name.length>0) {
+    if (this.trainer.idtrainer > 0) {
       let c = new Calificacion();
       c.idcalificacion = this.idcalificacionselec;
-      this.trainer.calificacion = c;
       let r = new rutinas();
       r.idrutinas = this.idrutinaselec;
       this.trainer.calificacion = c;
+      this.trainer.rutinas = r;
       if  (this.edicion){
       this.trainerService.modificar(this.trainer).subscribe(data => {
         this.trainerService.listar().subscribe(data => {
@@ -52,7 +52,10 @@ export class TrainercreaeditaComponent implements OnInit {
       this.trainerService.insertar(this.trainer).subscribe(data =>{
         this.trainerService.listar().subscribe(data => {
           this.trainerService.setLista(data);
-        })
+        });
+      },err => {
+        //this.mensaje=err
+        console.log(err);
       })
     }
       this.router.navigate(['trainer']);
