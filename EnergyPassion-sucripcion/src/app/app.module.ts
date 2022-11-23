@@ -57,8 +57,8 @@ import { RutinasListarComponent } from './page/rutinas/rutinas-listar/rutinas-li
 import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/rutinas-creaedita.component';
 import { RutinasDialogoComponent } from './page/rutinas/rutinas-listar/rutinas-dialogo/rutinas-dialogo.component';
 import { RutinasBuscarComponent } from './page/rutinas/rutinas-buscar/rutinas-buscar.component';
-
-
+import {MatMenuModule} from '@angular/material/menu';
+import { HomeComponent } from './page/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +98,8 @@ import { RutinasBuscarComponent } from './page/rutinas/rutinas-buscar/rutinas-bu
     RutinasListarComponent,
     RutinasCreaeditaComponent,
     RutinasDialogoComponent,
-    RutinasBuscarComponent
+    RutinasBuscarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -116,7 +117,8 @@ import { RutinasBuscarComponent } from './page/rutinas/rutinas-buscar/rutinas-bu
     MatDatepickerModule,
     MatNativeDateModule,
     MatToolbarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

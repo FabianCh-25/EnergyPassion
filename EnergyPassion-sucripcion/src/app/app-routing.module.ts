@@ -19,6 +19,7 @@ import { RutinasCreaeditaComponent } from './page/rutinas/rutinas-creaedita/ruti
 const routes: Routes = [{
   path: 'propietarios', component: PropietarioComponent,children:[]},
 
+  {path: 'menu',component: RutinasComponent, children:[]},
 
   {
   path: 'trainer',component: TrainerComponent, children:[{ path: 'nuevo', component: TrainercreaeditaComponent},
