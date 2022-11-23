@@ -1,9 +1,9 @@
-
+import { Cliente } from './../../../module/cliente';
 import { ActivatedRoute,Params,Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Calificacion } from 'src/app/module/calificacion';
 import { CalificacionService } from 'src/app/service/calificacion.service';
-import { Cliente } from 'src/app/module/cliente';
+
 import { ClienteService } from 'src/app/service/cliente.service';
 @Component({
   selector: 'app-calificacioncreadita',
@@ -26,10 +26,17 @@ export class CalificacioncreaditaComponent implements OnInit {
       this.edicion = data['id'] != null;
       this.init();
   });
+  this.ClienteService.listar().subscribe(data => { this.listcliente = data });
     
 }
 aceptar():void{
-  if (this.calificacion.idcalificacion > 0 && this.calificacion.calificado.length > 0 && this.calificacion.idcliente) {
+  if (this.calificacion.idcalificacion > 0 ) {
+
+   
+    let c = new Cliente();
+      c.idcliente = this.idclienteselec;
+
+      this.calificacion.cliente=c;
     if (this.edicion) {
       this.calificacionService.modificar(this.calificacion).subscribe(data => {
         this.calificacionService.listar().subscribe(data => {
@@ -54,6 +61,8 @@ init() {
   if (this.edicion) {
     this.calificacionService.listarId(this.id).subscribe(data => {
       this.calificacion = data;
+      console.log(data);
+      this.idclienteselec = data.cliente.idcliente;
     })
   }
 
